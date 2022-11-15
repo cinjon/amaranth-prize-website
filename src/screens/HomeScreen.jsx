@@ -2,6 +2,7 @@ import React from "react";
 import treetrunk from "../assets/tree-trunk.png";
 import voterfraud from "../assets/voter-fraud.png";
 import rightarrow from "../assets/right-arrow.png";
+import externallink from "../assets/external-link.png";
 import tournamentbracket from "../assets/tournament-bracket.png";
 import bubbles from "../assets/bubbles.png";
 
@@ -81,12 +82,27 @@ export const HomeScreen = () => {
           <p className="section-description">
             We select a topic of primary importance within longevity research and convene a <span className="emphasis">panel of experts</span> to choose research efforts that are the most deserving.
           </p>
-          <p className="read-more">
+          <div className="read-more">
             <a className="read-more-text" href="https://google.com" target="_blank" rel="noreferrer">
               Read more about the experts
             </a>
             <img src={rightarrow} alt="right arrow" className="read-more-arrow" />
-          </p>
+          </div>
+        </div>
+      </div>
+
+      <div className="section learn-more-section">
+        <div className="content-container">
+          <a className="button" href="https://google.com" target="_blank" rel="noreferrer">
+            <p className="button-text">Learn more about the prize</p>
+          </a>
+          <div className="flex-spacer" />
+          <div className="read-more">
+            <a className="read-more-text" href="https://google.com" target="_blank" rel="noreferrer">
+              Visit Research Portfolio
+            </a>
+            <img src={externallink} alt="external link" className="external-link" />
+          </div>
         </div>
       </div>
 
