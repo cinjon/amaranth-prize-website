@@ -1,10 +1,13 @@
 import React from "react";
 import treetrunk from "../assets/tree-trunk.png";
+import voterfraud from "../assets/voter-fraud.png";
+import rightarrow from "../assets/right-arrow.png";
 
 export const HomeScreen = () => {
 
   return (
     <div className="screen home-screen">
+
       <div className="section powered-by-section">
         <div className="text-content">
           <p className="attribution">POWERED BY <span className="emphasis">Research Portfolio</span></p>
@@ -27,7 +30,24 @@ export const HomeScreen = () => {
         <div className="flex-spacer" />
         <img src={treetrunk} alt="tree trunk" className="section-image" />
       </div>
-      <div className="section-mission-section"></div>
+
+      <div className="section mission-section">
+        <img src={voterfraud} alt="lifespan" className="section-image" />
+        <div className="flex-spacer" />
+        <div className="text-content">
+          <p className="section-title">WHAT IS OUR MISSION</p>
+          <p className="section-description">
+            Substantially increasing the human lifespan. The Amaranth Prize gives <span className="emphasis">no-strings attached funding</span> to the best research in Longevity.
+          </p>
+          <div className="read-more">
+            <a className="read-more-text" href="https://google.com" target="_blank" rel="noreferrer">
+              Read more about our selection process
+            </a>
+            <img src={rightarrow} alt="right arrow" className="read-more-arrow" />
+          </div>
+        </div>
+      </div>
+
       <div className="section-why-section"></div>
       <div className="section-how-section"></div>
       <div className="section-winning-papers-section"></div>
