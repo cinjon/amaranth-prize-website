@@ -1,0 +1,38 @@
+// VARIABLES
+// =====================
+
+// GLOBALS
+// =====================
+body {
+  margin: 0;
+  padding: 0;
+}
+
+h1, h2, h3, h4, h5, h6, p, hr, pre {
+  margin: 0;
+}
+
+a, input, textarea {
+  all: unset;
+  display: block;
+}
+
+button {
+  cursor: pointer;
+}
+
+.App {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
+// COMPONENTS
+// =====================
+
+// SCREENS
+// =====================
+.screen.home-screen {
+
+}
