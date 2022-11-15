@@ -1,0 +1,29 @@
+@font-face {
+  font-family: "SpaceGrotesk";
+  font-weight: 300;
+  src: local("SpaceGrotesk"), url("../fonts/SpaceGrotesk-Light.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "SpaceGrotesk";
+  font-weight: 400;
+  src: local("SpaceGrotesk"), url("../fonts/SpaceGrotesk-Regular.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "SpaceGrotesk";
+  font-weight: 500;
+  src: local("SpaceGrotesk"), url("../fonts/SpaceGrotesk-Medium.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "SpaceGrotesk";
+  font-weight: 600;
+  src: local("SpaceGrotesk"), url("../fonts/SpaceGrotesk-SemiBold.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "SpaceGrotesk";
+  font-weight: 700;
+  src: local("SpaceGrotesk"), url("../fonts/SpaceGrotesk-Bold.ttf") format("truetype");
+}

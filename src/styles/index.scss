@@ -1,11 +1,20 @@
+// IMPORTS
+// =====================
+@import "./fonts.scss";
+
 // VARIABLES
 // =====================
+$background-cream: #FDF9EE;
 
 // GLOBALS
 // =====================
 body {
   margin: 0;
   padding: 0;
+}
+
+* {
+  box-sizing: border-box;
 }
 
 h1, h2, h3, h4, h5, h6, p, hr, pre {
@@ -17,19 +26,64 @@ a, input, textarea {
   display: block;
 }
 
-button {
+a, button {
   cursor: pointer;
 }
 
-.App {
+.Container {
   min-height: 100vh;
+  background-color: $background-cream;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+.App {
+  width: 100%;
+  max-width: 1280px;
+  background-color: $background-cream;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
 }
 
+.flex-spacer {
+  flex: 1;
+}
+
 // COMPONENTS
 // =====================
+.Header {
+  height: 90px;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+
+  .branding {
+    margin-left: 64px;
+    img.logo {
+      width: 160px;
+    }
+  }
+
+  .navigation-links {
+    margin-right: 64px;
+    display: flex;
+    flex-direction: row;
+    .navigation-link {
+      font-family: "SpaceGrotesk";
+      font-weight: 400;
+      &:not(:first-child) {
+        margin-left: 22px;
+      }
+      &.selected {
+        font-weight: 500;
+      }
+    }
+  }
+}
 
 // SCREENS
 // =====================
