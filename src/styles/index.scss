@@ -342,4 +342,16 @@ a, button {
     }
   }
 
+  .section.how-section {
+    margin-top: 60px;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+
+    img.section-image {
+      width: 552px;
+    }
+  }
+
 }

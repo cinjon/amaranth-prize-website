@@ -3,6 +3,7 @@ import treetrunk from "../assets/tree-trunk.png";
 import voterfraud from "../assets/voter-fraud.png";
 import rightarrow from "../assets/right-arrow.png";
 import tournamentbracket from "../assets/tournament-bracket.png";
+import bubbles from "../assets/bubbles.png";
 
 export const HomeScreen = () => {
 
@@ -72,7 +73,23 @@ export const HomeScreen = () => {
         <img src={tournamentbracket} alt="research logo" className="section-image" />
       </div>
 
-      <div className="section how-section"></div>
+      <div className="section how-section">
+        <img src={bubbles} alt="research logo" className="section-image" />
+        <div className="flex-spacer" />
+        <div className="text-content">
+          <p className="section-title">HOW IT WORKS</p>
+          <p className="section-description">
+            We select a topic of primary importance within longevity research and convene a <span className="emphasis">panel of experts</span> to choose research efforts that are the most deserving.
+          </p>
+          <p className="read-more">
+            <a className="read-more-text" href="https://google.com" target="_blank" rel="noreferrer">
+              Read more about the experts
+            </a>
+            <img src={rightarrow} alt="right arrow" className="read-more-arrow" />
+          </p>
+        </div>
+      </div>
+
       <div className="section winning-papers-section"></div>
       <div className="section faq-section"></div>
       <div className="section mailing-list-section"></div>
