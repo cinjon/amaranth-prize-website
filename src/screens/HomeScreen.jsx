@@ -2,6 +2,7 @@ import React from "react";
 import treetrunk from "../assets/tree-trunk.png";
 import voterfraud from "../assets/voter-fraud.png";
 import rightarrow from "../assets/right-arrow.png";
+import tournamentbracket from "../assets/tournament-bracket.png";
 
 export const HomeScreen = () => {
 
@@ -48,9 +49,31 @@ export const HomeScreen = () => {
         </div>
       </div>
 
-      <div className="section-why-section"></div>
-      <div className="section-how-section"></div>
-      <div className="section-winning-papers-section"></div>
+      <div className="section why-section">
+        <div className="text-content">
+          <p className="section-title">WHY WE DO IT THIS WAY</p>
+          <p className="section-description">
+            We award research <span className="emphasis">retrospectively</span> because we believe scientists should pursue what they find most intriguing.
+          </p>
+          <p className="section-description">
+            The Amaranth Prize is awarded to 30 winners, as well as the research that influenced them.
+          </p>
+          <p className="section-description">
+            <span className="emphasis">Science stands on the shoulders of giants.</span>
+          </p>
+          <div className="read-more">
+            <a className="read-more-text" href="https://google.com" target="_blank" rel="noreferrer">
+              Read more about awarding the prize
+            </a>
+            <img src={rightarrow} alt="right arrow" className="read-more-arrow" />
+          </div>
+        </div>
+        <div className="flex-spacer" />
+        <img src={tournamentbracket} alt="research logo" className="section-image" />
+      </div>
+
+      <div className="section how-section"></div>
+      <div className="section winning-papers-section"></div>
       <div className="section faq-section"></div>
       <div className="section mailing-list-section"></div>
     </div>
