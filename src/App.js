@@ -2,6 +2,8 @@ import React from "react";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 
 import { Header } from "./components/Header";
+import { Footer } from "./components/Footer";
+
 import { HomeScreen } from "./screens/HomeScreen";
 import { AboutScreen } from "./screens/AboutScreen";
 import { WinningPapersScreen } from "./screens/WinningPapers";
@@ -22,7 +24,9 @@ export const App = () => {
             <Route path="/terms-of-service" element={<TermsOfServiceScreen />} />
             <Route path="/privacy-policy" element={<PrivacyPolicyScreen />} />
           </Routes>
-        </Router>
+          <div className="flex-spacer" />
+          <Footer />
+          </Router>
       </div>
     </div>
   )

@@ -2,9 +2,12 @@
 // =====================
 @import "./fonts.scss";
 
-// VARIABLES
+// COLORS
 // =====================
 $background-cream: #FDF9EE;
+$charcoal-dark: #333333;
+$charcoal-medium: #575757;
+$charcoal-light: #C2C2C2;
 
 // GLOBALS
 // =====================
@@ -17,13 +20,14 @@ body {
   box-sizing: border-box;
 }
 
-h1, h2, h3, h4, h5, h6, p, hr, pre {
-  margin: 0;
-}
-
 a, input, textarea {
   all: unset;
   display: block;
+}
+
+h1, h2, h3, h4, h5, h6, p, hr, pre, a {
+  margin: 0;
+  font-family: "SpaceGrotesk";
 }
 
 a, button {
@@ -41,7 +45,10 @@ a, button {
 
 .App {
   width: 100%;
+  min-height: 100vh;
   max-width: 1280px;
+  padding-left: 64px;
+  padding-right: 64px;
   background-color: $background-cream;
   display: flex;
   flex-direction: column;
@@ -62,25 +69,99 @@ a, button {
   align-items: center;
 
   .branding {
-    margin-left: 64px;
     img.logo {
       width: 160px;
     }
   }
 
   .navigation-links {
-    margin-right: 64px;
     display: flex;
     flex-direction: row;
     .navigation-link {
-      font-family: "SpaceGrotesk";
       font-weight: 400;
+      font-size: 16px;
+      color: $charcoal-medium;
       &:not(:first-child) {
         margin-left: 22px;
       }
       &.selected {
         font-weight: 500;
+        color: $charcoal-dark;
       }
+    }
+  }
+}
+
+.Footer {
+  width: 100%;
+  height: 260px;
+
+  .section {
+    border-top: 1px solid $charcoal-light;
+    &.section {
+      height: 200px;
+      padding-top: 40px;
+      display: flex;
+      flex-direction: row;
+      justify-content: flex-start;
+      align-items: flex-start;
+
+      .branding {
+        img.logo {
+          width: 160px;
+        }
+      }
+
+      .content {
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-start;
+        align-items: flex-start;
+
+        .content-section {
+          display: flex;
+          flex-direction: column;
+          justify-content: flex-start;
+          align-items: flex-start;
+
+          &:not(:first-child) {
+            margin-left: 40px;
+          }
+
+          .content-title {
+            font-weight: 500;
+            font-size: 16px;
+            color: $charcoal-dark;
+          }
+
+          .navigation-link {
+            margin-top: 16px;
+            font-weight: 400;
+            font-size: 16px;
+            color: $charcoal-medium;
+          }
+
+        }
+
+      }
+
+      .social-links {
+        margin-top: 16px;
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-start;
+        img {
+          width: 24px;
+        }
+        .social-link:not(:first-child) {
+          margin-left: 28px;
+        }
+      }
+
+    }
+
+    &.section-secondary {
+      height: 60px;
     }
   }
 }
