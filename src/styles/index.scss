@@ -7,7 +7,8 @@
 $background-cream: #FDF9EE;
 $charcoal-dark: #333333;
 $charcoal-medium: #575757;
-$charcoal-light: #C2C2C2;
+$charcoal-light: #7B7B7B;
+$charcoal-ultra-light: #C2C2C2;
 
 // GLOBALS
 // =====================
@@ -97,8 +98,8 @@ a, button {
   height: 260px;
 
   .section {
-    border-top: 1px solid $charcoal-light;
-    &.section {
+    border-top: 1px solid $charcoal-ultra-light;
+    &.section-primary {
       height: 200px;
       padding-top: 40px;
       display: flex;
@@ -162,6 +163,37 @@ a, button {
 
     &.section-secondary {
       height: 60px;
+      display: flex;
+      flex-direction: row;
+      justify-content: flex-start;
+      align-items: center;
+
+      p.copyright {
+        font-weight: 400;
+        font-size: 12px;
+        color: $charcoal-light;
+      }
+
+      .navigation-links {
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-start;
+        align-items: center;
+
+        .vertical-bar {
+          font-weight: 400;
+          font-size: 12px;
+          color: $charcoal-light;
+          margin-left: 8px;
+          margin-right: 8px;
+        }
+
+        .navigation-link {
+          font-weight: 400;
+          font-size: 12px;
+          color: $charcoal-light;
+        }
+      }
     }
   }
 }
