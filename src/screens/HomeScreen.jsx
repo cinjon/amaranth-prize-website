@@ -1,4 +1,7 @@
 import React from "react";
+import yaml from "js-yaml";
+import papersData from "../data/papers.yml";
+
 import treetrunk from "../assets/tree-trunk.png";
 import voterfraud from "../assets/voter-fraud.png";
 import rightarrow from "../assets/right-arrow.png";
@@ -6,7 +9,18 @@ import externallink from "../assets/external-link.png";
 import tournamentbracket from "../assets/tournament-bracket.png";
 import bubbles from "../assets/bubbles.png";
 
+import { PaperCarousel } from "../components/PaperCarousel";
+
 export const HomeScreen = () => {
+  const [papers, setPapers] = React.useState([]);
+
+  React.useEffect(() => {
+    fetch(papersData)
+      .then((papersResponse) => { return papersResponse.text() })
+      .then((papersText) => {
+        setPapers(yaml.load(papersText));
+      });
+  }, []);
 
   return (
     <div className="screen home-screen">
@@ -106,7 +120,21 @@ export const HomeScreen = () => {
         </div>
       </div>
 
-      <div className="section winning-papers-section"></div>
+      <div className="section winning-papers-section">
+        <div className="winning-paper-highlight molecular-genetics">
+          <p className="section-title">Winners in Human Molecular Genetics</p>
+          <PaperCarousel papers={papers} />
+        </div>
+        <div className="winning-paper-highlight oxidative-medicine">
+          <p className="section-title">Winners in Oxidative medicine and cellular longevity</p>
+          <PaperCarousel papers={papers} />
+        </div>
+        <div className="winning-paper-highlight plos-biology">
+          <p className="section-title">Winners in PLoS biology</p>
+          <PaperCarousel papers={papers} />
+        </div>
+      </div>
+
       <div className="section faq-section"></div>
       <div className="section mailing-list-section"></div>
     </div>

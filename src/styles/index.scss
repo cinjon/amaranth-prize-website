@@ -1,6 +1,7 @@
 // IMPORTS
 // =====================
 @import "./fonts.scss";
+@import "react-alice-carousel/lib/scss/alice-carousel.scss";
 
 // COLORS
 // =====================
@@ -214,6 +215,64 @@ a, button {
     font-weight: 500;
     color: $background-cream;
   }
+}
+
+.paper-carousel {
+
+  .alice-carousel {
+
+    .alice-carousel__stage-item {
+      &.__active {
+        margin-right: 13px;
+      }
+    }
+
+    .alice-carousel__prev-btn {
+      margin: 0px;
+      padding: 0px;
+      position: absolute;
+      top: 232px;
+      left: -18px;
+    }
+
+    .alice-carousel__next-btn {
+      margin: 0px;
+      padding: 0px;
+      position: absolute;
+      top: 232px;
+      left: calc(100% - 18px);
+    }
+  }
+
+
+  .carousel-button {
+    cursor: pointer;
+    width: 36px;
+    height: 36px;
+    padding: 10px;
+    border: 1px solid $charcoal-ultra-light;
+
+    .carousel-button-image {
+      width: 16px;
+    }
+  }
+
+  .paper {
+    width: 352px;
+    height: 500px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    padding-left: 30px;
+    padding-right: 30px;
+    border: 1px solid $charcoal-ultra-light;
+
+    img.paper-thumbnail {
+      width: 100px;
+    }
+  }
+
 }
 
 // SCREENS
