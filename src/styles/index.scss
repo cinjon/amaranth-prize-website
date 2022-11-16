@@ -98,6 +98,7 @@ a, button {
 .Footer {
   width: 100%;
   height: 260px;
+  margin-top: 60px;
 
   .section {
     border-top: 1px solid $charcoal-ultra-light;
@@ -223,7 +224,7 @@ a, button {
 
     .alice-carousel__stage-item {
       &.__active {
-        margin-right: 13px;
+        margin-right: 16px;
       }
     }
 
@@ -269,7 +270,28 @@ a, button {
     border: 1px solid $charcoal-ultra-light;
 
     img.paper-thumbnail {
+      margin-top: 32px;
       width: 100px;
+    }
+
+    .paper-title {
+      margin-top: 24px;
+      font-size: 24px;
+      font-weight: 400;
+      line-height: 125%;
+      letter-spacing: -0.01em;
+      color: $charcoal-dark;
+      text-align: center;
+    }
+
+    .paper-authors {
+      margin-top: 8px;
+      font-size: 14px;
+      font-weight: 400;
+      line-height: 140%;
+      letter-spacing: -0.01em;
+      color: $charcoal-dark;
+      text-align: center;
     }
   }
 
@@ -323,6 +345,26 @@ a, button {
       margin-left: 4px;
       height: 16px;
     }
+  }
+
+  .see-all {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+
+    .see-all-text {
+      font-size: 16px;
+      font-weight: 400;
+      color: $charcoal-dark;
+      text-decoration-line: underline;
+    }
+
+    img.see-all-arrow {
+      margin-left: 4px;
+      width: 12px;
+    }
+
   }
 
   .section.powered-by-section {
@@ -450,6 +492,40 @@ a, button {
 
       .read-more {
         margin-top: 0px;
+      }
+    }
+  }
+
+  .section.winning-papers-section {
+    margin-top: 60px;
+
+    .text-content .section-description {
+      max-width: 734px;
+    }
+
+    .winning-paper-highlight {
+      &:nth-child(2) {
+        margin-top: 40px;
+      }
+
+      &:not(:nth-child(2)) {
+        margin-top: 60px;
+      }
+
+      .highlight-header {
+        height: 36px;
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-start;
+        align-items: center;
+
+        .highlight-title {
+          font-size: 28px;
+          font-weight: 400;
+          line-height: 125%;
+          color: $charcoal-dark;
+          letter-spacing: -0.01em;
+        }
       }
     }
   }

@@ -4,7 +4,7 @@ import papersData from "../data/papers.yml";
 
 import treetrunk from "../assets/tree-trunk.png";
 import voterfraud from "../assets/voter-fraud.png";
-import rightarrow from "../assets/right-arrow.png";
+import rightArrow from "../assets/right-arrow.png";
 import externallink from "../assets/external-link.png";
 import tournamentbracket from "../assets/tournament-bracket.png";
 import bubbles from "../assets/bubbles.png";
@@ -60,7 +60,7 @@ export const HomeScreen = () => {
             <a className="read-more-text" href="https://google.com" target="_blank" rel="noreferrer">
               Read more about our selection process
             </a>
-            <img src={rightarrow} alt="right arrow" className="read-more-arrow" />
+            <img src={rightArrow} alt="right arrow" className="read-more-arrow" />
           </div>
         </div>
       </div>
@@ -81,7 +81,7 @@ export const HomeScreen = () => {
             <a className="read-more-text" href="https://google.com" target="_blank" rel="noreferrer">
               Read more about awarding the prize
             </a>
-            <img src={rightarrow} alt="right arrow" className="read-more-arrow" />
+            <img src={rightArrow} alt="right arrow" className="read-more-arrow" />
           </div>
         </div>
         <div className="flex-spacer" />
@@ -100,7 +100,7 @@ export const HomeScreen = () => {
             <a className="read-more-text" href="https://google.com" target="_blank" rel="noreferrer">
               Read more about the experts
             </a>
-            <img src={rightarrow} alt="right arrow" className="read-more-arrow" />
+            <img src={rightArrow} alt="right arrow" className="read-more-arrow" />
           </div>
         </div>
       </div>
@@ -121,16 +121,47 @@ export const HomeScreen = () => {
       </div>
 
       <div className="section winning-papers-section">
+        <div className="text-content">
+          <p className="section-title">WINNING PAPERS</p>
+          <p className="section-description"><span className="emphasis">The 2022 Amaranth Prize winners</span> were selected in the field from a review of over 500 papers.</p>
+        </div>
         <div className="winning-paper-highlight molecular-genetics">
-          <p className="section-title">Winners in Human Molecular Genetics</p>
+          <div className="highlight-header">
+            <p className="highlight-title">Winners in Human Molecular Genetics</p>
+            <div className="flex-spacer" />
+            <div className="see-all">
+              <a className="see-all-text" href="https://google.com" target="_blank" rel="noreferrer">
+                See all
+              </a>
+              <img src={rightArrow} alt="right arrow" className="see-all-arrow" />
+            </div>
+          </div>
           <PaperCarousel papers={papers} />
         </div>
         <div className="winning-paper-highlight oxidative-medicine">
-          <p className="section-title">Winners in Oxidative medicine and cellular longevity</p>
+          <div className="highlight-header">
+            <p className="highlight-title">Winners in Oxidative medicine and cellular longevity</p>
+            <div className="flex-spacer" />
+            <div className="see-all">
+              <a className="see-all-text" href="https://google.com" target="_blank" rel="noreferrer">
+                See all
+              </a>
+              <img src={rightArrow} alt="right arrow" className="see-all-arrow" />
+            </div>
+          </div>
           <PaperCarousel papers={papers} />
         </div>
         <div className="winning-paper-highlight plos-biology">
-          <p className="section-title">Winners in PLoS biology</p>
+          <div className="highlight-header">
+            <p className="highlight-title">Winners in PLoS biology</p>
+            <div className="flex-spacer" />
+            <div className="see-all">
+              <a className="see-all-text" href="https://google.com" target="_blank" rel="noreferrer">
+                See all
+              </a>
+              <img src={rightArrow} alt="right arrow" className="see-all-arrow" />
+            </div>
+          </div>
           <PaperCarousel papers={papers} />
         </div>
       </div>
