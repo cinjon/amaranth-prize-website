@@ -151,7 +151,7 @@ export const HomeScreen = () => {
               <img src={rightArrow} alt="right arrow" className="see-all-arrow" />
             </div>
           </div>
-          <PaperCarousel papers={papers} />
+          <PaperCarousel papers={papers.filter((paper) => { return paper["molecular-genetics"] })} />
         </div>
         <div className="winning-paper-highlight oxidative-medicine">
           <div className="highlight-header">
@@ -164,7 +164,7 @@ export const HomeScreen = () => {
               <img src={rightArrow} alt="right arrow" className="see-all-arrow" />
             </div>
           </div>
-          <PaperCarousel papers={papers} />
+          <PaperCarousel papers={papers.filter((paper) => { return paper["oxidative-medicine"] })} />
         </div>
         <div className="winning-paper-highlight plos-biology">
           <div className="highlight-header">
@@ -177,7 +177,7 @@ export const HomeScreen = () => {
               <img src={rightArrow} alt="right arrow" className="see-all-arrow" />
             </div>
           </div>
-          <PaperCarousel papers={papers} />
+          <PaperCarousel papers={papers.filter((paper) => { return paper["plos-biology"] })} />
         </div>
       </div>
 
