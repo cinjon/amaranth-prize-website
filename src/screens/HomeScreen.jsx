@@ -1,10 +1,15 @@
 import React from "react";
 import yaml from "js-yaml";
+import Collapse from "@kunukn/react-collapse";
+
 import papersData from "../data/papers.yml";
+import faqData from "../data/faq.yml";
 
 import treetrunk from "../assets/tree-trunk.png";
 import voterfraud from "../assets/voter-fraud.png";
 import rightArrow from "../assets/right-arrow.png";
+import caratUp from "../assets/carat-up.png";
+import caratDown from "../assets/carat-down.png";
 import externallink from "../assets/external-link.png";
 import tournamentbracket from "../assets/tournament-bracket.png";
 import bubbles from "../assets/bubbles.png";
@@ -13,13 +18,23 @@ import { PaperCarousel } from "../components/PaperCarousel";
 
 export const HomeScreen = () => {
   const [papers, setPapers] = React.useState([]);
+  const [faqs, setFAQs] = React.useState([]);
+  const [uncollapsedFAQIndex, setUncollapsedFAQIndex] = React.useState(0);
 
   React.useEffect(() => {
+
     fetch(papersData)
       .then((papersResponse) => { return papersResponse.text() })
       .then((papersText) => {
         setPapers(yaml.load(papersText));
       });
+
+    fetch(faqData)
+      .then((faqResponse) => { return faqResponse.text() })
+      .then((faqText) => {
+        setFAQs(yaml.load(faqText));
+      });
+
   }, []);
 
   return (
@@ -166,7 +181,34 @@ export const HomeScreen = () => {
         </div>
       </div>
 
-      <div className="section faq-section"></div>
+      <div className="section faq-section">
+        <h2 className="section-title">Frequently Asked Questions</h2>
+        <div className="faq-items">
+          {faqs.map((faq, index) => {
+            return (
+              <div className="faq-item" onClick={() => {
+                if(uncollapsedFAQIndex === index) {
+                  setUncollapsedFAQIndex(-1);
+                } else {
+                  setUncollapsedFAQIndex(index);
+                }
+              }}>
+                <div className="faq-question">
+                  <h4 className="faq-question-text">{faq.question}</h4>
+                  <div className="flex-spacer" />
+                  {uncollapsedFAQIndex === index ? (<img src={caratUp} alt="carat up" className="faq-collapse-icon" />) : (<img src={caratDown} alt="carat down" className="faq-collapse-icon" />)}
+                </div>
+                <Collapse
+                  isOpen={(uncollapsedFAQIndex === index)}
+                  transition={`height 290ms cubic-bezier(0.4, 0, 0.2, 1)`}>
+                  <p className="faq-answer">{faq.answer}</p>
+                </Collapse>
+              </div>
+            )
+          })}
+        </div>
+      </div>
+
       <div className="section mailing-list-section"></div>
     </div>
   )
