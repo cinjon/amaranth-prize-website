@@ -209,7 +209,18 @@ export const HomeScreen = () => {
         </div>
       </div>
 
-      <div className="section mailing-list-section"></div>
+      <div className="section mailing-list-section">
+        <h2 className="section-title">Join our mailing list</h2>
+        <div className="flex-spacer" />
+        <div className="email-input-container">
+          <input
+            className="email-input"
+            placeholder="Email address" />
+        </div>
+        <div className="button inverted">
+            <p className="button-text">Submit</p>
+        </div>
+      </div>
     </div>
   )
 
