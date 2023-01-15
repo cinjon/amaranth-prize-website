@@ -1,41 +1,121 @@
 ---
 
-  - title: FUS Mislocalization and Vulnerability to DNA Damage in ALS Patients Derived hiPSCs and Aging Motoneurons
-    authors: J. Higelin, M. Demestre, S. Putz, J. P. Delling, C. Jacob, A. Lutz, Julia Bausinger, Anne-Kathrin Huber, Moritz Klingenstein, G. Barbi, G. Speit, Annemarie Huebers, Jochen H Weishaupt, A. Hermann, S. Liebau, A. Ludolph, T. Boeckers
-    influencing-research: null
-    thumbnail-uri: null
-    molecular-genetics: true
-    oxidative-medicine: true
-    plos-biology: true
+  - title: Knockout of receptor for advanced glycation end-products attenuates age-related renal lesions
+    authors: Teissier T, Quersin V, Gnemmi V, Daroux M, Howsam M, Delguste F, Lemoine C, Fradin C, Schmidt AM, Cauffiez C, Brousseau T, Glowacki F, Tessier FJ, Boulanger E, Frimat M
+    influencingResearch: null
+    thumbnailName: 03.Aging-Cell---2019---Teissier---Knockout-of-receptor-for-advanced-glycation-end‐products-attenuates-age‐related-renal.p1.r144.png
+    winner: true
+    parent: false
+    grandparent: false
 
-  - title: Aging-associated oxidized albumin promotes cellular senescence and endothelial damage
-    authors: Mingyang He, Yi Lin, Yunlan Tang, Yi Liu, Weiwei Zhou, Chuang Li, Guihong Sun, Mingxiong Guo
-    influencing-research: null
-    thumbnail-uri: null
-    molecular-genetics: true
-    oxidative-medicine: true
-    plos-biology: true
+  - title: Personal aging markers and ageotypes revealed by deep longitudinal profiling
+    authors: Ahadi S, Zhou W, Schüssler-Fiorenza Rose SM, Sailani MR, Contrepois K, Avina M, Ashland M, Brunet A, Snyder M
+    influencingResearch: null
+    thumbnailName: 04.nihms-1566100.png
+    winner: true
+    parent: false
+    grandparent: false
 
-  - title: Aging-associated oxidized albumin promotes cellular senescence and endothelial damage
-    authors: S. Miwa, Rafal Czapiewski, Tengfei Wan, A. Bell, Kirsten N. Hill, T. von Zglinicki, G. Saretzki
-    influencing-research: null
-    thumbnail-uri: null
-    molecular-genetics: false
-    oxidative-medicine: false
-    plos-biology: false
+  - title: Protein carbamylation is a hallmark of aging
+    authors: Gorisse L, Pietrement C, Vuiblet V, Schmelzer CE, Köhler M, Duca L, Debelle L, Fornès P, Jaisson S, Gillery
+    influencingResearch: null
+    thumbnailName: 05.pnas.1517096113.png
+    winner: true
+    parent: false
+    grandparent: false
 
-  - title: Global Protein Oxidation Profiling Suggests Efficient Mitochondrial Proteome Homeostasis During Aging*
-    authors: N. Stefanova, N. A. Muraleva, K. Y. Maksimova, E. Rudnitskaya, E. Kiseleva, D. V. Telegina, N. Kolosova
-    influencing-research: null
-    thumbnail-uri: null
-    molecular-genetics: true
-    oxidative-medicine: true
-    plos-biology: true
+  - title: Vitamin C is a source of oxoaldehyde and glycative stress in age‐related cataract and neurodegenerative diseases
+    authors: Fan X, Sell DR, Hao C, Liu S, Wang B, Wesson DW, Siedlak S, Zhu X, Kavanagh TJ, Harrison FE, Monnier VM
+    influencingResearch: null
+    thumbnailName: 07.Aging-Cell---2020---Fan---Vitamin-C-is-a-source-of-oxoaldehyde-and-glycative-stress-in-age‐related-cataract-and.png
+    winner: true
+    parent: false
+    grandparent: false
 
-  - title: The role of protein oxidation and DNA damage in elderly hypertension
-    authors: E. Lucas, Eyal Privman, L. Keller
-    influencing-research: null
-    thumbnail-uri: null
-    molecular-genetics: true
-    oxidative-medicine: true
-    plos-biology: true
+  - title: Constant molecular aging rates vs. the exponential acceleration of mortality
+    authors: Caleb E. Finch, Eileen M. Crimmins
+    influencingResearch: null
+    thumbnailName: 08.pnas.1524017113.png
+    winner: true
+    parent: false
+    grandparent: false
+
+  - title: Cyanate-Impaired Angiogenesis Association With Poor Coronary Collateral Growth in Patients With Stable Angina and Chronic Total Occlusion
+    authors: J. Sun, Keya Yang, J. Mao, W. Shen, Lin Lu, Qi Hong Wu, Yan Ping Wang, Li Ping Wu, R. Zhang
+    influencingResearch: null
+    thumbnailName: 09.JAHA.116.004700.png
+    winner: true
+    parent: false
+    grandparent: false
+
+  - title: Improved Glycemic Control and Vascular Function in Overweight and Obese Subjects by Glyoxalase 1 Inducer Formulation.
+    authors: Mingzhan Xue, Martin O. Weickert, Sheharyar Qureshi, Ngianga-Bakwin Kandala, Attia Anwar, Molly Waldron, Alaa Shafie, David Messenger, Mark Fowler, Gail Jenkins, Naila Rabbani, Paul J. Thornalley
+    influencingResearch: null
+    thumbnailName: 10.db160153.png
+    winner: true
+    parent: false
+    grandparent: false
+
+  - title: Plasma proteomic biomarker signature of age predicts health and life span
+    authors: Toshiko Tanaka, Nathan Basisty, Giovanna Fantoni, Julián Candia, Ann Z Moore, Angelique Biancotto, Birgit Schilling, Stefania Bandinelli, Luigi Ferrucci
+    influencingResearch: null
+    thumbnailName: 11.elife-61073-v2.png
+    winner: true
+    parent: false
+    grandparent: false
+
+  - title: Protein carbamylation exacerbates vascular calcification.
+    authors: Daisuke Mori, I. Matsui, Akihiro Shimomura, Nobuhiro Hashimoto, Ayumi Matsumoto, Karin Shimada, Satoshi Yamaguchi, Tatsufumi Oka, Keiichi Kubota, S. Yonemoto, Y. Sakaguchi, Atsushi Takahashi, Y. Shintani, S. Takashima, Y. Takabatake, T. Hamano, Y. Isaka
+    influencingResearch: null
+    thumbnailName: 12.PIIS0085253818301832.png
+    winner: true
+    parent: false
+    grandparent: false
+
+  - title: Protein signatures of centenarians and their offspring suggest centenarians age slower than other humans
+    authors: Paola Sebastiani, Anthony Federico, Melody Morris, Anastasia Gurinovich, Toshiko Tanaka, Kevin B Chandler, Stacy L Andersen, Gerald Denis, Catherine E Costello, Luigi Ferrucci, Lori Jennings, David J Glass, Stefano Monti, Thomas T Perls
+    influencingResearch: null
+    thumbnailName: 13.Aging-Cell---2021---Sebastiani---Protein-signatures-of-centenarians-and-their-offspring-suggest-centenarians-age-slower.png
+    winner: true
+    parent: false
+    grandparent: false
+
+  - title: Proteomic Atlas of the Human Brain in Alzheimer's Disease
+    authors: Justin McKetney, Rosalyn M Runde, Alexander S Hebert, Shahriar Salamat, Subhojit Roy, Joshua J Coon
+    influencingResearch: null
+    thumbnailName: 14.nihms-1021755.png
+    winner: true
+    parent: false
+    grandparent: false
+
+  - title: RAGE binds preamyloid IAPP intermediates and mediates pancreatic Beta cell proteotoxicity
+    authors: A. Abedini, P. Cao, A. Plesner, Jinghua Zhang, Meilun He, J. Derk, Sachi A. Patil, Rosa Rosario, Jacqueline Lonier, Fei Song, Hyunwook Koh, Huilin Li, D. Raleigh, A. Schmidt
+    influencingResearch: null
+    thumbnailName: 15.85210.2-20201218131631-covered-e0fd13ba177f913fd3156f593ead4cfd.png
+    winner: true
+    parent: false
+    grandparent: false
+
+  - title: Role of Carbonyl Modifications on Aging-Associated Protein Aggregation
+    authors: Maya Tanase, Aleksandra M. Urbanska, Valerio Zolla, Cristina C. Clement, Liling Huang, Kateryna Morozova, Carlo Follo, Michael Goldberg, Barbara Roda, Pierluigi Reschiglian & Laura Santambrogio
+    influencingResearch: null
+    thumbnailName: 16.srep19311.png
+    winner: true
+    parent: false
+    grandparent: false
+
+  - title: Single Muscle Fiber Proteomics Reveals Fiber-Type-Specific Features of Human Muscle Aging
+    authors: Murgia M, Toniolo L, Nagaraj N, Ciciliot S, Vindigni V, Schiaffino S, Reggiani C, Mann M.
+    influencingResearch: null
+    thumbnailName: 17.1-s2.0-S2211124717307118-main.png
+    winner: true
+    parent: false
+    grandparent: false
+
+  - title: Undulating changes in human plasma proteome profiles across the lifespan
+    authors: Lehallier B, Gate D, Schaum N, Nanasi T, Lee SE, Yousef H, Moran Losada P, Berdnik D, Keller A, Verghese J, Sathyan S, Franceschi C, Milman S, Barzilai N, Wyss-Coray T.
+    influencingResearch: null
+    thumbnailName: 18.nihms-1541641.png
+    winner: true
+    parent: false
+    grandparent: false
