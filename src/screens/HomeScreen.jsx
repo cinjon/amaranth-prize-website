@@ -1,4 +1,4 @@
-import React from "react";
+import React, {useState, useEffect} from "react";
 import yaml from "js-yaml";
 import Collapse from "@kunukn/react-collapse";
 
@@ -15,13 +15,66 @@ import tournamentbracket from "../assets/tournament-bracket.png";
 import bubbles from "../assets/bubbles.png";
 
 import { PaperCarousel } from "../components/PaperCarousel";
-import { IS_FAQ_READY, IS_RESEARCH_PORTFOLIO_READY, IS_WINNERS_READY, IS_PARENTS_READY, IS_GRANDPARENTS_READY } from "../constants"
+import AnalyticsEventTracker from "../components/AnalyticsEventTracker"
+import { IS_FAQ_READY, IS_JOIN_READY, IS_RESEARCH_PORTFOLIO_READY, IS_WINNERS_READY, IS_PARENTS_READY, IS_GRANDPARENTS_READY } from "../constants"
+import { isValidEmail } from "../helpers"
+
+const Join = () => {
+    const [email, setEmail] = useState("")
+    const [subscribed, setSubscribed] = useState(false)
+
+    // async function attemptAirtablePublish(email, papers) {
+    //     let fields = {"email": email}
+    //     await publishAirtableInterest(fields)
+    //         .then((response) => {
+    //             setSubscribed(response);
+    //             gaEventTracker('publishAirtable', 'success')
+    //         })
+    //         .catch((error) => {
+    //             gaEventTracker('publishAirtable', 'fail')
+    //             gaEventTracker('publishAirtableError', error)
+    //             console.log(error)
+    //         })
+    // }
+
+    const onSubmit = (e, email) => {
+        e.preventDefault();
+        // attemptAirtablePublish(email)
+    }
+
+    const onInputChange = (e) => {
+        const target = e.target;
+        const value = target.value;
+        setEmail(value)
+        setSubscribed(false)
+    }  
+
+    return (
+        <form action="#" onSubmit={(e) => onSubmit(e, email)}>
+          <div className="section mailing-list-section">
+            <h2 className="section-title">Join our mailing list</h2>
+            <div className="flex-spacer" />
+            <div className="email-input-container">
+              <input
+                className="email-input"
+                placeholder="Email address"
+                onChange={onInputChange}
+                value={email}
+              />
+            </div>
+            <div className="button inverted">
+              <p className="button-text">Submit</p>
+            </div>
+          </div>
+        </form>
+    )
+}
 
 const FAQ = () => {
     const [faqs, setFAQs] = React.useState([]);
     const [uncollapsedFAQIndex, setUncollapsedFAQIndex] = React.useState(0);
 
-    React.useEffect(() => {
+    useEffect(() => {
         fetch(faqData)
             .then((faqResponse) => { return faqResponse.text() })
             .then((faqText) => {
@@ -62,10 +115,9 @@ const FAQ = () => {
 
 export const HomeScreen = () => {
   const [papers, setPapers] = React.useState([]);
+  const gaEventTracker = AnalyticsEventTracker('Home');
 
-    console.log(papers)
-  React.useEffect(() => {
-
+  useEffect(() => {
     fetch(papersData)
       .then((papersResponse) => { return papersResponse.text() })
       .then((papersText) => {
@@ -75,6 +127,7 @@ export const HomeScreen = () => {
   }, []);
 
     const faq = IS_FAQ_READY ? <FAQ /> : null
+    const join = IS_JOIN_READY ? <Join /> : null
 
   return (
     <div className="screen home-screen">
@@ -230,18 +283,7 @@ export const HomeScreen = () => {
 
       {faq}
 
-      <div className="section mailing-list-section">
-        <h2 className="section-title">Join our mailing list</h2>
-        <div className="flex-spacer" />
-        <div className="email-input-container">
-          <input
-            className="email-input"
-            placeholder="Email address" />
-        </div>
-        <div className="button inverted">
-            <p className="button-text">Submit</p>
-        </div>
-      </div>
+      {join}
     </div>
   )
 
