@@ -4,7 +4,7 @@ export const TermsOfServiceScreen = () => {
 
   return (
     <div className="screen terms-of-service-screen">
-      <p>Hello from Terms of Service Screen!</p>
+      <p>Terms of Service ... coming soon!</p>
     </div>
   )
 

@@ -1,6 +1,5 @@
 import React from "react";
 import AliceCarousel from "react-alice-carousel";
-import paperThumbnail from "../assets/default-paper-thumbnail.png";
 import caratLeft from "../assets/carat-left.png";
 import caratRight from "../assets/carat-right.png";
 
@@ -21,8 +20,11 @@ const NextButton = () => {
 }
 
 export const PaperCarousel = ({ papers }) => {
-
+    console.log(process.env)
   const paperComponents = papers.map((paper, index) => {
+      // const paperThumbnailUrl = 
+
+      const paperThumbnail = process.env.PUBLIC_URL + '/paper-thumbnails/' + paper.thumbnailName
     return (
       <div className="paper" key={`paper-${index}`}>
         <img src={paperThumbnail} alt="paper thumbnail" className="paper-thumbnail" />
