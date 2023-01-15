@@ -1,5 +1,6 @@
-import React from "react";
+import React, {useEffect} from "react";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
+import ReactGA from 'react-ga';
 
 import { Header } from "./components/Header";
 import { Footer } from "./components/Footer";
@@ -10,7 +11,18 @@ import { WinningPapersScreen } from "./screens/WinningPapers";
 import { TermsOfServiceScreen } from "./screens/TermsOfService";
 import { PrivacyPolicyScreen } from "./screens/PrivacyPolicy";
 
+const TRACKING_ID = process.env.REACT_APP_ANALYTICS_TRACKING_ID
+// ReactGA.initialize(TRACKING_ID, {debug:true});
+ReactGA.initialize(TRACKING_ID, {
+    gaOptions: {
+        siteSpeedSampleRate: 100
+    }
+})
+
 export const App = () => {
+    useEffect(() => {
+        ReactGA.pageview(window.location.pathname + window.location.search);
+    }, [])
 
   return (
     <div className="Container">
