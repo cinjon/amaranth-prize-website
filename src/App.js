@@ -1,6 +1,6 @@
 import React, {useEffect} from "react";
-import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
-import ReactGA from 'react-ga';
+import { Route, Routes, useLocation } from "react-router-dom";
+import ReactGA from 'react-ga4';
 
 import { Header } from "./components/Header";
 import { Footer } from "./components/Footer";
@@ -12,22 +12,30 @@ import { TermsOfServiceScreen } from "./screens/TermsOfService";
 import { PrivacyPolicyScreen } from "./screens/PrivacyPolicy";
 
 const TRACKING_ID = process.env.REACT_APP_ANALYTICS_TRACKING_ID
-// ReactGA.initialize(TRACKING_ID, {debug:true});
-ReactGA.initialize(TRACKING_ID, {
-    gaOptions: {
-        siteSpeedSampleRate: 100
-    }
-})
+if (TRACKING_ID !== undefined) {
+    console.log("Initialized GA in App.js")
+    ReactGA.initialize(TRACKING_ID, {
+        legacyDimensionMetric: false,
+        gaOptions: {
+            siteSpeedSampleRate: 100
+        }
+    })    
+}
 
 export const App = () => {
+    const location = useLocation();
+    const page = location.pathname + location.search
+
     useEffect(() => {
-        ReactGA.pageview(window.location.pathname + window.location.search);
-    }, [])
+        // track pageview with gtag / react-ga / react-ga4, for example:
+        if (TRACKING_ID !== undefined) {
+            ReactGA.send({ hitType: "pageview", page: page})
+        }
+    }, [page]);
 
   return (
     <div className="Container">
       <div className="App">
-        <Router>
           <Header />
           <Routes>
             <Route path="/" element={<HomeScreen />} />
@@ -38,7 +46,6 @@ export const App = () => {
           </Routes>
           <div className="flex-spacer" />
           <Footer />
-          </Router>
       </div>
     </div>
   )
