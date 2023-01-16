@@ -20,7 +20,6 @@ const NextButton = () => {
 }
 
 export const PaperCarousel = ({ papers }) => {
-    console.log(process.env)
   const paperComponents = papers.map((paper, index) => {
       // const paperThumbnailUrl = 
 
