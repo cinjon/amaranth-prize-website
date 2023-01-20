@@ -219,13 +219,57 @@ a, button {
     font-size: 16px;
     font-weight: 500;
     color: $background-cream;
+
+    span.emphasis {
+      font-weight: 700;
+    }
+
   }
+
+  .external-link {
+    margin-left: 4px;
+    width: 16px;
+  }
+
 }
 
 input {
   width: 100%;
   height: 54px;
   border-bottom: 1px solid $charcoal-ultra-light;
+}
+
+.checkbox-wrapper {
+  cursor: pointer;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+
+  .label {
+    line-height: 140%;
+    font-size: 14px;
+    font-weight: 400;
+    color: $charcoal-dark;
+    margin-left: 8px;
+  }
+
+  .checkbox {
+    width: 16px;
+    min-width: 16px;
+    height: 16px;
+    min-height: 16px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    border: 2px solid $charcoal-dark;
+
+    &.checked {
+      background-color: $charcoal-dark;
+    }
+  }
+
 }
 
 .paper-carousel {
@@ -642,7 +686,7 @@ input {
     font-weight: 400;
     color: $charcoal-dark;
     line-height: 120%;
-    letter-spacing: 0.01em;
+    letter-spacing: -0.01em;
     span.emphasis {
       color: $emphasis-red;
     }
@@ -665,10 +709,9 @@ input {
         max-width: 555px;
         font-size: 56px;
         line-height: 100%;
-        letter-spacing: 0.01em;
+        letter-spacing: -0.01em;
         font-weight: 400;
         color: $charcoal-dark;
-
         span.emphasis {
           color: $emphasis-red;
         }
@@ -677,7 +720,7 @@ input {
         margin-top: 15px;
         font-size: 28px;
         line-height: 125%;
-        letter-spacing: 0.01em;
+        letter-spacing: -0.01em;
         font-weight: 400;
         color: $charcoal-dark;
       }
@@ -838,4 +881,186 @@ input {
 
   }
 
+}
+
+.screen.winning-papers-screen {
+  .section.banner-section {
+    margin-top: 60px;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+
+    img.section-image {
+      width: 457px;
+    }
+
+    .text-content {
+      .primary {
+        margin-top: 15px;
+        max-width: 555px;
+        font-size: 56px;
+        line-height: 100%;
+        letter-spacing: -0.01em;
+        font-weight: 400;
+        color: $charcoal-dark;
+      }
+      .secondary {
+        margin-top: 15px;
+        font-size: 32px;
+        line-height: 125%;
+        letter-spacing: -0.01em;
+        font-weight: 400;
+        color: $charcoal-dark;
+        span.emphasis {
+          color: $emphasis-red;
+        }
+      }
+    }
+
+    .annotation-text {
+      margin-top: 32px;
+      font-size: 24px;
+      line-height: 125%;
+      font-weight: 400;
+      color: $charcoal-dark;
+    }
+
+    .button.claim-prize {
+      margin-top: 12px;
+      width: 320px;
+      .button-text {
+        font-weight: 500;
+      }
+    }
+  }
+
+  .section.all-papers-section {
+    margin-top: 100px;
+
+    .filters-toggles {
+      display: flex;
+      flex-direction: row;
+      justify-content: flex-start;
+      margin-bottom: 16px;
+
+      .filters-toggle {
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-start;
+        align-items: center;
+
+        .toggle-text {
+          color: $charcoal-dark;
+          font-size: 16px;
+          font-weight: 500;
+          cursor: pointer;
+        }
+
+        img.filters-collapse-icon {
+          margin-top: -2px;
+          margin-left: 6px;
+          height: 14px;
+          width: 14px;
+        }
+
+      }
+    }
+
+    .sorts-select {
+      .sort-item {
+        &:not(:first-child) {
+          margin-top: 8px;
+        }
+      }
+      margin-bottom: 24px;
+    }
+
+    .filters-select {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+
+      .filters-column {
+        max-width: 352px;
+
+        .filter-item {
+          &:not(:first-child) {
+            margin-top: 8px;
+          }
+        }
+      }
+    }
+
+    .filters-actions {
+      margin-top: 32px;
+      margin-bottom: 24px;
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+
+      .button {
+        &:not(:first-child) {
+          margin-left: 8px;
+        }
+      }
+    }
+
+    .papers-display {
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+    }
+
+    .paper-container {
+      border-top: 1px solid $charcoal-ultra-light;
+      padding-top: 42px;
+      padding-bottom: 42px;
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+
+      .paper-image {
+        border: 1px solid $charcoal-dark;
+        img.paper-thumbnail {
+          width: 152px;
+        }
+      }
+
+      .paper-details {
+        width: 952px;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+
+        .paper-title {
+          color: $charcoal-dark;
+          font-size: 28px;
+          line-height: 125%;
+          letter-spacing: -0.01em;
+          font-weight: 400;
+        }
+
+        .paper-authors {
+          margin-top: 8px;
+          color: $charcoal-dark;
+          font-size: 16px;
+          line-height: 140%;
+          letter-spacing: -0.01em;
+          font-weight: 400;
+        }
+
+        .influencing-research-title {
+          margin-top: 8px;
+          font-size: 16px;
+          color: $charcoal-dark;
+          line-height: 140%;
+          letter-spacing: -0.01em;
+          font-weight: 600;
+        }
+      }
+
+    }
+
+  }
 }

@@ -7,7 +7,7 @@ import { Footer } from "./components/Footer";
 
 import { HomeScreen } from "./screens/HomeScreen";
 import { AboutScreen } from "./screens/AboutScreen";
-import { WinningPapersScreen } from "./screens/WinningPapers";
+import { WinningPapersScreen } from "./screens/WinningPapersScreen";
 import { TermsOfServiceScreen } from "./screens/TermsOfService";
 import { PrivacyPolicyScreen } from "./screens/PrivacyPolicy";
 
@@ -19,7 +19,7 @@ if (TRACKING_ID !== undefined) {
         gaOptions: {
             siteSpeedSampleRate: 100
         }
-    })    
+    })
 }
 
 export const App = () => {
