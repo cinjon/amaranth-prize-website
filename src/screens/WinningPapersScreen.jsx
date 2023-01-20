@@ -17,7 +17,7 @@ export const WinningPapersScreen = () => {
   const [papers, setPapers] = useState([]);
   const [selectedPaperTags, setSelectedPaperTags] = useState([]);
   const [activeSortIndex, setActiveSortIndex] = useState(0);
-  const [uncollapsedPapersIndex, setUncollapsedPapersIndex] = useState(0);
+  const [uncollapsedPapersIndex, setUncollapsedPapersIndex] = useState(-1);
 
   useEffect(() => {
     fetch(papersData)
