@@ -1,9 +1,13 @@
 import React, { useState, useEffect } from "react";
 import yaml from "js-yaml";
+import useForceUpdate from "use-force-update";
+import Collapse from "@kunukn/react-collapse";
+
 import tournamentbracket from "../assets/tournament-bracket.png";
 import externallink from "../assets/external-link.png";
 import checkmark from "../assets/checkmark.png";
-import useForceUpdate from "use-force-update";
+import caratUp from "../assets/carat-up.png";
+import caratDown from "../assets/carat-down.png";
 
 import papersData from "../data/papers.yml";
 import { PAPER_TAGS } from "../constants";
@@ -12,6 +16,8 @@ export const WinningPapersScreen = () => {
   const forceUpdate = useForceUpdate();
   const [papers, setPapers] = useState([]);
   const [selectedPaperTags, setSelectedPaperTags] = useState([]);
+  const [activeSortIndex, setActiveSortIndex] = useState(0);
+  const [uncollapsedPapersIndex, setUncollapsedPapersIndex] = useState(0);
 
   useEffect(() => {
     fetch(papersData)
@@ -44,6 +50,22 @@ export const WinningPapersScreen = () => {
             {isChecked ? <img src={checkmark} alt="checkmark" className="checkmark" /> : (<></>)}
           </div>
           <p className="label">{paperTag.display}</p>
+        </div>
+      </div>
+    );
+  }
+
+  const renderPaperSort = (sortItem, index) => {
+    const isChecked = activeSortIndex === index;
+    const checkboxClassName = isChecked ? "checkbox checked" : "checkbox";
+
+    return (
+      <div className="sort-item" key={`sort-item-${index}`} onClick={() => { setActiveSortIndex(index) }}>
+        <div className="checkbox-wrapper">
+          <div className={checkboxClassName}>
+            {isChecked ? <img src={checkmark} alt="checkmark" className="checkmark" /> : (<></>)}
+          </div>
+          <p className="label">{sortItem}</p>
         </div>
       </div>
     );
@@ -86,31 +108,69 @@ export const WinningPapersScreen = () => {
         <img src={tournamentbracket} alt="research logo" className="section-image" />
       </div>
       <div className="section all-papers-section">
-        <div className="filters-select">
-          <div className="filters-column column-1">
-            {PAPER_TAGS.slice(0, 14).map((paperTag, index) => {
-              return renderPaperFilter(paperTag, index);
-            })}
+        <div className="filters-toggles">
+          <div className="filters-toggle toggle-filters">
+            <p className="toggle-text" onClick={() => {
+              if(uncollapsedPapersIndex === 0) {
+                setUncollapsedPapersIndex(-1);
+              } else {
+                setUncollapsedPapersIndex(0);
+              }
+            }}>{`FILTERS: ${selectedPaperTags.length > 0 ? selectedPaperTags.length : "ALL"}`}</p>
+            {uncollapsedPapersIndex === 0 ? (<img src={caratUp} alt="carat up" className="filters-collapse-icon" />) : (<img src={caratDown} alt="carat down" className="filters-collapse-icon" />)}
           </div>
-          <div className="filters-column column-2">
-            {PAPER_TAGS.slice(14, 28).map((paperTag, index) => {
-              return renderPaperFilter(paperTag, index);
-            })}
-          </div>
-          <div className="filters-column column-3">
-            {PAPER_TAGS.slice(28, 42).map((paperTag, index) => {
-              return renderPaperFilter(paperTag, index);
-            })}
-          </div>
-        </div>
-        <div className="filters-actions">
-          <div className="button inverted clear-button" onClick={() => { setSelectedPaperTags([]); }}>
-            <p className="button-text">Clear</p>
-          </div>
-          <div className="button apply-button" onClick={() => { return true; }}>
-            <p className="button-text">Apply & Close</p>
+          <div className="flex-spacer" />
+          <div className="filters-toggle toggle-sorts">
+            <p className="toggle-text" onClick={() => {
+              if(uncollapsedPapersIndex === 1) {
+                setUncollapsedPapersIndex(-1);
+              } else {
+                setUncollapsedPapersIndex(1);
+              }
+            }}>SORTS: A TO Z</p>
+            {uncollapsedPapersIndex === 1 ? (<img src={caratUp} alt="carat up" className="filters-collapse-icon" />) : (<img src={caratDown} alt="carat down" className="filters-collapse-icon" />)}
           </div>
         </div>
+        <Collapse
+          isOpen={(uncollapsedPapersIndex === 0)}
+          transition={`height 290ms cubic-bezier(0.4, 0, 0.2, 1)`}>
+          <>
+            <div className="filters-select">
+              <div className="filters-column column-1">
+                {PAPER_TAGS.slice(0, 14).map((paperTag, index) => {
+                  return renderPaperFilter(paperTag, index);
+                })}
+              </div>
+              <div className="filters-column column-2">
+                {PAPER_TAGS.slice(14, 28).map((paperTag, index) => {
+                  return renderPaperFilter(paperTag, index);
+                })}
+              </div>
+              <div className="filters-column column-3">
+                {PAPER_TAGS.slice(28, 42).map((paperTag, index) => {
+                  return renderPaperFilter(paperTag, index);
+                })}
+              </div>
+          </div>
+          <div className="filters-actions">
+            <div className="button inverted clear-button" onClick={() => { setSelectedPaperTags([]); }}>
+              <p className="button-text">Clear</p>
+            </div>
+            <div className="button apply-button" onClick={() => { setUncollapsedPapersIndex(-1); }}>
+              <p className="button-text">Apply & Close</p>
+            </div>
+          </div>
+          </>
+        </Collapse>
+        <Collapse
+          isOpen={(uncollapsedPapersIndex === 1)}
+          transition={`height 290ms cubic-bezier(0.4, 0, 0.2, 1)`}>
+          <div className="sorts-select">
+            {["A to Z", "Z to A", "Chronologically", "Recently Published"].map((sortItem, index) => {
+              return renderPaperSort(sortItem, index);
+            })}
+          </div>
+        </Collapse>
         <div className="papers-display">
           {papers.map((paper, index) => {
             return renderPaper(paper, index);

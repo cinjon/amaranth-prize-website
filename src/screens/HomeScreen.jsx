@@ -75,11 +75,11 @@ const FAQ = () => {
     const [uncollapsedFAQIndex, setUncollapsedFAQIndex] = React.useState(0);
 
     useEffect(() => {
-        fetch(faqData)
-            .then((faqResponse) => { return faqResponse.text() })
-            .then((faqText) => {
-                setFAQs(yaml.load(faqText));
-            });
+      fetch(faqData)
+        .then((faqResponse) => { return faqResponse.text() })
+        .then((faqText) => {
+            setFAQs(yaml.load(faqText));
+        });
     })
 
     return (
