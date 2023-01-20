@@ -239,6 +239,39 @@ input {
   border-bottom: 1px solid $charcoal-ultra-light;
 }
 
+.checkbox-wrapper {
+  cursor: pointer;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+
+  .label {
+    line-height: 140%;
+    font-size: 14px;
+    font-weight: 400;
+    color: $charcoal-dark;
+    margin-left: 8px;
+  }
+
+  .checkbox {
+    width: 16px;
+    min-width: 16px;
+    height: 16px;
+    min-height: 16px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    border: 2px solid $charcoal-dark;
+
+    &.checked {
+      background-color: $charcoal-dark;
+    }
+  }
+
+}
+
 .paper-carousel {
 
   .alice-carousel {
@@ -904,6 +937,23 @@ input {
 
   .section.all-papers-section {
     margin-top: 125px;
+
+    .filters-select {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      margin-bottom: 24px;
+
+      .filters-column {
+        max-width: 352px;
+
+        .filter-item {
+          &:not(:first-child) {
+            margin-top: 8px;
+          }
+        }
+      }
+    }
 
     .papers-display {
       display: flex;
