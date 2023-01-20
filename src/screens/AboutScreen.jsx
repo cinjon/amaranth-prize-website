@@ -1,7 +1,34 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
+import yaml from "js-yaml";
+
 import voterfraud from "../assets/voter-fraud.png";
+import rightArrow from "../assets/right-arrow.png";
+
+import expertsData from "../data/experts.yml";
 
 export const AboutScreen = () => {
+  const [experts, setExperts] = React.useState([]);
+
+  useEffect(() => {
+    fetch(expertsData)
+      .then((expertsResponse) => { return expertsResponse.text() })
+      .then((expertsText) => {
+        setExperts(yaml.load(expertsText));
+      });
+  }, []);
+
+  const renderExpert = (expertData) => {
+    return (
+      <div className="expert">
+        <p className="expert-title">{expertData.title}</p>
+        <p className="expert-bio">{expertData.bio}</p>
+        <a className="expert-linkedin" href={expertData.linkedin ?? "#"} target="_blank" rel="noreferrer">
+          <p className="linkedin-text">Linkedin</p>
+          <img src={rightArrow} alt="right-arrow" className="view-more-arrow" />
+        </a>
+      </div>
+    )
+  }
 
   return (
     <div className="screen about-screen">
@@ -38,13 +65,43 @@ export const AboutScreen = () => {
       </div>
 
       <div className="section awarding-the-prize-section">
-
+        <p className="section-title">AWARDING THE PRIZE</p>
+        <p className="section-description">We leverage the <span className="emphasis">Research Portfolio</span> platform to distribute awards, creating a simple, on-chain record of prizes and influences.</p>
+        <div className="awarding-infos">
+          <div className="awarding-info">
+            <p className="info-title">Claiming process</p>
+            <p className="info-details">Researchers will mint their research using their unique technology on Research Portfolio. Afterwards they can claim their prize by simply connecting their wallets to Amaranth Prize website.</p>
+          </div>
+          <div className="awarding-info">
+            <p className="info-title">Influencing Papers</p>
+            <p className="info-details">We enable each prize wining team to acknowledge and reward the influential papers and work that has provided a foundation for their winning research efforts.</p>
+          </div>
+        </div>
       </div>
 
       <div className="section experts-section">
-
+        <p className="section-title">THE EXPERTS</p>
+        <p className="section-description">This is a list of our generous experts giving their time to choose the most impactful research in longevity this year.</p>
+        <div className="experts">
+          <div className="experts-column column-1">
+            {experts[0] ? renderExpert(experts[0]) : (<></>)}
+            {experts[1] ? renderExpert(experts[1]) : (<></>)}
+          </div>
+          <div className="experts-column column-2">
+            {experts[2] ? renderExpert(experts[2]) : (<></>)}
+            {experts[3] ? renderExpert(experts[3]) : (<></>)}
+          </div>
+          <div className="experts-column column-3">
+            {experts[4] ? renderExpert(experts[4]) : (<></>)}
+            {experts[5] ? renderExpert(experts[5]) : (<></>)}
+          </div>
+          <div className="experts-column column-4">
+            {experts[6] ? renderExpert(experts[6]) : (<></>)}
+            {experts[7] ? renderExpert(experts[7]) : (<></>)}
+          </div>
+        </div>
+        <p className="more-experts-disclaimer">More experts will be added to the panel</p>
       </div>
-
     </div>
   )
 

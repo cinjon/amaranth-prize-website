@@ -643,6 +643,9 @@ input {
     color: $charcoal-dark;
     line-height: 120%;
     letter-spacing: 0.01em;
+    span.emphasis {
+      color: $emphasis-red;
+    }
   }
 
   .section.banner-section {
@@ -727,6 +730,112 @@ input {
         line-height: 125%;
       }
     }
+  }
+
+  .section.awarding-the-prize-section {
+    margin-top: 100px;
+
+    .awarding-infos {
+      margin-top: 32px;
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+
+      .awarding-info {
+        max-width: 555px;
+        border-top: 1px solid $charcoal-ultra-light;
+
+        .info-title {
+          margin-top: 24px;
+          font-size: 28px;
+          font-weight: 400;
+          color: $charcoal-dark;
+          line-height: 125%;
+        }
+
+        .info-details {
+          margin-top: 8px;
+          font-size: 20px;
+          font-weight: 400;
+          color: $charcoal-dark;
+          line-height: 125%;
+        }
+      }
+
+    }
+  }
+
+  .section.experts-section {
+    margin-top: 100px;
+    margin-bottom: 100px;
+
+    .experts {
+      margin-top: 32px;
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+
+      .experts-column {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+      }
+
+      .expert {
+        width: 252px;
+        border-top: 1px solid $charcoal-ultra-light;
+        margin-top: 24px;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+
+        .expert-title {
+          margin-top: 18px;
+          font-size: 16px;
+          font-weight: 600;
+          color: $charcoal-dark;
+          line-height: 135%;
+          letter-spacing: -0.01em;
+        }
+
+        .expert-bio {
+          margin-top: 8px;
+          font-size: 16px;
+          font-weight: 400;
+          color: $charcoal-dark;
+          line-height: 135%;
+          letter-spacing: -0.01em;
+        }
+
+        .expert-linkedin {
+          margin-top: 8px;
+          display: flex;
+          flex-direction: row;
+          align-items: center;
+
+          .linkedin-text {
+            border-bottom: 1px solid $charcoal-dark;
+            font-size: 16px;
+            font-weight: 400;
+            color: $charcoal-dark;
+          }
+
+          img.view-more-arrow {
+            margin-left: 4px;
+            width: 12px;
+          }
+        }
+      }
+    }
+
+    .more-experts-disclaimer {
+      margin-top: 64px;
+      font-size: 16px;
+      font-weight: 400;
+      color: $charcoal-light;
+      text-align: center;
+    }
+
   }
 
 }
