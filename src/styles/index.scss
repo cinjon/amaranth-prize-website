@@ -901,4 +901,66 @@ input {
       }
     }
   }
+
+  .section.all-papers-section {
+    margin-top: 125px;
+
+    .papers-display {
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+    }
+
+
+    .paper-container {
+      border-top: 1px solid $charcoal-ultra-light;
+      padding-top: 42px;
+      padding-bottom: 42px;
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+
+      .paper-image {
+        border: 1px solid $charcoal-dark;
+        img.paper-thumbnail {
+          width: 152px;
+        }
+      }
+
+      .paper-details {
+        width: 952px;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+
+        .paper-title {
+          color: $charcoal-dark;
+          font-size: 28px;
+          line-height: 125%;
+          letter-spacing: -0.01em;
+          font-weight: 400;
+        }
+
+        .paper-authors {
+          margin-top: 8px;
+          color: $charcoal-dark;
+          font-size: 16px;
+          line-height: 140%;
+          letter-spacing: -0.01em;
+          font-weight: 400;
+        }
+
+        .influencing-research-title {
+          margin-top: 8px;
+          font-size: 16px;
+          color: $charcoal-dark;
+          line-height: 140%;
+          letter-spacing: -0.01em;
+          font-weight: 600;
+        }
+      }
+
+    }
+
+  }
 }
