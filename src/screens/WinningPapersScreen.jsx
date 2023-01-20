@@ -103,6 +103,14 @@ export const WinningPapersScreen = () => {
             })}
           </div>
         </div>
+        <div className="filters-actions">
+          <div className="button inverted clear-button" onClick={() => { setSelectedPaperTags([]); }}>
+            <p className="button-text">Clear</p>
+          </div>
+          <div className="button apply-button" onClick={() => { return true; }}>
+            <p className="button-text">Apply & Close</p>
+          </div>
+        </div>
         <div className="papers-display">
           {papers.map((paper, index) => {
             return renderPaper(paper, index);

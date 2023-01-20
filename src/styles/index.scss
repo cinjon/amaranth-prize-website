@@ -942,7 +942,6 @@ input {
       display: flex;
       flex-direction: row;
       justify-content: space-between;
-      margin-bottom: 24px;
 
       .filters-column {
         max-width: 352px;
@@ -951,6 +950,20 @@ input {
           &:not(:first-child) {
             margin-top: 8px;
           }
+        }
+      }
+    }
+
+    .filters-actions {
+      margin-top: 32px;
+      margin-bottom: 24px;
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+
+      .button {
+        &:not(:first-child) {
+          margin-left: 8px;
         }
       }
     }
