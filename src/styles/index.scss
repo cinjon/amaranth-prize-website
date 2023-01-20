@@ -219,7 +219,18 @@ a, button {
     font-size: 16px;
     font-weight: 500;
     color: $background-cream;
+
+    span.emphasis {
+      font-weight: 700;
+    }
+
   }
+
+  .external-link {
+    margin-left: 4px;
+    width: 16px;
+  }
+
 }
 
 input {
@@ -642,7 +653,7 @@ input {
     font-weight: 400;
     color: $charcoal-dark;
     line-height: 120%;
-    letter-spacing: 0.01em;
+    letter-spacing: -0.01em;
     span.emphasis {
       color: $emphasis-red;
     }
@@ -665,10 +676,9 @@ input {
         max-width: 555px;
         font-size: 56px;
         line-height: 100%;
-        letter-spacing: 0.01em;
+        letter-spacing: -0.01em;
         font-weight: 400;
         color: $charcoal-dark;
-
         span.emphasis {
           color: $emphasis-red;
         }
@@ -677,7 +687,7 @@ input {
         margin-top: 15px;
         font-size: 28px;
         line-height: 125%;
-        letter-spacing: 0.01em;
+        letter-spacing: -0.01em;
         font-weight: 400;
         color: $charcoal-dark;
       }
@@ -838,4 +848,57 @@ input {
 
   }
 
+}
+
+.screen.winning-papers-screen {
+  .section.banner-section {
+    margin-top: 60px;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+
+    img.section-image {
+      width: 457px;
+    }
+
+    .text-content {
+      .primary {
+        margin-top: 15px;
+        max-width: 555px;
+        font-size: 56px;
+        line-height: 100%;
+        letter-spacing: -0.01em;
+        font-weight: 400;
+        color: $charcoal-dark;
+      }
+      .secondary {
+        margin-top: 15px;
+        font-size: 32px;
+        line-height: 125%;
+        letter-spacing: -0.01em;
+        font-weight: 400;
+        color: $charcoal-dark;
+        span.emphasis {
+          color: $emphasis-red;
+        }
+      }
+    }
+
+    .annotation-text {
+      margin-top: 32px;
+      font-size: 24px;
+      line-height: 125%;
+      font-weight: 400;
+      color: $charcoal-dark;
+    }
+
+    .button.claim-prize {
+      margin-top: 12px;
+      width: 320px;
+      .button-text {
+        font-weight: 500;
+      }
+    }
+  }
 }

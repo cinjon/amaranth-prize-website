@@ -14,10 +14,10 @@ export const Header = () => {
       path: "/about",
       display: "ABOUT"
     },
-    // {
-    //   path: "/winning-papers",
-    //   display: "WINNING PAPERS"
-    // }
+    {
+      path: "/winning-papers",
+      display: "WINNING PAPERS"
+    }
   ];
 
   return (
