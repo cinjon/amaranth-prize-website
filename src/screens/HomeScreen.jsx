@@ -47,7 +47,7 @@ const Join = () => {
         const value = target.value;
         setEmail(value)
         setSubscribed(false)
-    }  
+    }
 
     return (
         <form action="#" onSubmit={(e) => onSubmit(e, email)}>
@@ -79,7 +79,7 @@ const FAQ = () => {
             .then((faqResponse) => { return faqResponse.text() })
             .then((faqText) => {
                 setFAQs(yaml.load(faqText));
-            });        
+            });
     })
 
     return (
@@ -110,7 +110,7 @@ const FAQ = () => {
           })}
         </div>
       </div>
-    )    
+    )
 }
 
 export const HomeScreen = () => {
@@ -123,7 +123,6 @@ export const HomeScreen = () => {
       .then((papersText) => {
         setPapers(yaml.load(papersText));
       });
-
   }, []);
 
     const faq = IS_FAQ_READY ? <FAQ /> : null
@@ -249,7 +248,7 @@ export const HomeScreen = () => {
           </div>
           <PaperCarousel papers={papers.filter((paper) => { return paper["winner"] })} />
         </div>
-        {IS_PARENTS_READY && 
+        {IS_PARENTS_READY &&
         <div className="winning-paper-highlight parents">
           <div className="highlight-header">
             <p className="highlight-title">Parents of the winning papers</p>
@@ -264,7 +263,7 @@ export const HomeScreen = () => {
           <PaperCarousel papers={papers.filter((paper) => { return paper["parent"] })} />
         </div>
         }
-        {IS_GRANDPARENTS_READY && 
+        {IS_GRANDPARENTS_READY &&
         <div className="winning-paper-highlight grandparents">
           <div className="highlight-header">
             <p className="highlight-title">Grandparents of the winning papers</p>
