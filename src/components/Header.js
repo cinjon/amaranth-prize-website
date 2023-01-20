@@ -10,10 +10,10 @@ export const Header = () => {
       path: "/",
       display: "HOME"
     },
-    // {
-    //   path: "/about",
-    //   display: "ABOUT"
-    // },
+    {
+      path: "/about",
+      display: "ABOUT"
+    },
     // {
     //   path: "/winning-papers",
     //   display: "WINNING PAPERS"

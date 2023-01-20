@@ -626,3 +626,107 @@ input {
   }
 
 }
+
+.screen.about-screen {
+
+  .section-title {
+    font-size: 18px;
+    font-weight: 400;
+    color: $charcoal-dark;
+  }
+
+  .section-description {
+    margin-top: 24px;
+    max-width: 750px;
+    font-size: 32px;
+    font-weight: 400;
+    color: $charcoal-dark;
+    line-height: 120%;
+    letter-spacing: 0.01em;
+  }
+
+  .section.banner-section {
+    margin-top: 60px;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+
+    img.section-image {
+      width: 457px;
+    }
+
+    .text-content {
+      .primary {
+        margin-top: 15px;
+        max-width: 555px;
+        font-size: 56px;
+        line-height: 100%;
+        letter-spacing: 0.01em;
+        font-weight: 400;
+        color: $charcoal-dark;
+
+        span.emphasis {
+          color: $emphasis-red;
+        }
+      }
+      .secondary {
+        margin-top: 15px;
+        font-size: 28px;
+        line-height: 125%;
+        letter-spacing: 0.01em;
+        font-weight: 400;
+        color: $charcoal-dark;
+      }
+    }
+
+  }
+
+  .section.selection-process-section {
+    margin-top: 100px;
+
+    .selection-process-steps {
+      margin-top: 32px;
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+    }
+
+    .selection-process-step {
+      position: relative;
+      width: 352px;
+      min-height: 300px;
+      border-top: 1px solid $charcoal-ultra-light;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+
+      .step-number {
+        position: absolute;
+        top: 16px;
+        font-size: 56px;
+        font-weight: 300;
+        color: $charcoal-dark;
+      }
+
+      .step-title {
+        margin-top: 24px;
+        margin-left: 46px;
+        font-size: 28px;
+        font-weight: 400;
+        color: $charcoal-dark;
+        line-height: 125%;
+      }
+
+      .step-details {
+        margin-left: 46px;
+        margin-top: 8px;
+        font-size: 20px;
+        font-weight: 400;
+        color: $charcoal-dark;
+        line-height: 125%;
+      }
+    }
+  }
+
+}
