@@ -1064,3 +1064,57 @@ input {
 
   }
 }
+
+.screen.terms-of-service-screen {
+
+  .content {
+    margin-bottom: 100px;
+    display: flex;
+    flex-direction: column;
+
+    .section-title {
+      margin-top: 72px;
+      text-align: center;
+      font-size: 56px;
+      font-weight: 400;
+      letter-spacing: 0.01em;
+      color: $charcoal-dark;
+    }
+
+    .section-subtitle {
+      margin-top: 8px;
+      margin-bottom: 64px;
+      text-align: center;
+      font-size: 20px;
+      font-weight: 400;
+      line-height: 125%;
+      letter-spacing: -0.01em;
+      color: $charcoal-medium;
+    }
+
+    .numbered-section {
+      position: relative;
+      margin-top: 24px;
+      .section-number {
+        position: absolute;
+        top: 1.5px;
+      }
+      .section-text {
+        margin-left: 24px;
+      }
+    }
+
+    .section-text {
+      color: $charcoal-dark;
+      font-size: 16px;
+      line-height: 140%;
+      letter-spacing: -0.01em;
+      font-weight: 400;
+
+      span.emphasis {
+        font-weight: 600;
+      }
+    }
+  }
+
+}
