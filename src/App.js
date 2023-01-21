@@ -8,8 +8,8 @@ import { Footer } from "./components/Footer";
 import { HomeScreen } from "./screens/HomeScreen";
 import { AboutScreen } from "./screens/AboutScreen";
 import { WinningPapersScreen } from "./screens/WinningPapersScreen";
-import { TermsOfServiceScreen } from "./screens/TermsOfService";
-import { PrivacyPolicyScreen } from "./screens/PrivacyPolicy";
+import { TermsOfServiceScreen } from "./screens/TermsOfServiceScreen";
+import { PrivacyPolicyScreen } from "./screens/PrivacyPolicyScreen";
 
 const TRACKING_ID = process.env.REACT_APP_ANALYTICS_TRACKING_ID
 if (TRACKING_ID !== undefined) {
