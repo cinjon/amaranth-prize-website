@@ -392,6 +392,84 @@ input {
 
 .paper-carousel {
 
+  @media screen and (min-width: 0px) and (max-width: 480px) {
+    .paper {
+      width: 348px;
+      height: 500px;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+      align-items: center;
+      padding-left: 30px;
+      padding-right: 30px;
+      border: 1px solid $charcoal-ultra-light;
+
+      img.paper-thumbnail {
+        margin-top: 32px;
+        width: 100px;
+      }
+
+      .paper-title {
+        margin-top: 24px;
+        font-size: 24px;
+        font-weight: 400;
+        line-height: 125%;
+        letter-spacing: -0.01em;
+        color: $charcoal-dark;
+        text-align: center;
+      }
+
+      .paper-authors {
+        margin-top: 8px;
+        font-size: 14px;
+        font-weight: 400;
+        line-height: 140%;
+        letter-spacing: -0.01em;
+        color: $charcoal-dark;
+        text-align: center;
+      }
+    }
+  }
+
+  @media screen and (min-width: 480px) {
+    .paper {
+      width: 352px;
+      height: 500px;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+      align-items: center;
+      padding-left: 30px;
+      padding-right: 30px;
+      border: 1px solid $charcoal-ultra-light;
+
+      img.paper-thumbnail {
+        margin-top: 32px;
+        width: 100px;
+      }
+
+      .paper-title {
+        margin-top: 24px;
+        font-size: 24px;
+        font-weight: 400;
+        line-height: 125%;
+        letter-spacing: -0.01em;
+        color: $charcoal-dark;
+        text-align: center;
+      }
+
+      .paper-authors {
+        margin-top: 8px;
+        font-size: 14px;
+        font-weight: 400;
+        line-height: 140%;
+        letter-spacing: -0.01em;
+        color: $charcoal-dark;
+        text-align: center;
+      }
+    }
+  }
+
   .alice-carousel {
 
     .alice-carousel__stage-item {
@@ -417,7 +495,6 @@ input {
     }
   }
 
-
   .carousel-button {
     cursor: pointer;
     width: 36px;
@@ -427,43 +504,6 @@ input {
 
     .carousel-button-image {
       width: 16px;
-    }
-  }
-
-  .paper {
-    width: 352px;
-    height: 500px;
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    align-items: center;
-    padding-left: 30px;
-    padding-right: 30px;
-    border: 1px solid $charcoal-ultra-light;
-
-    img.paper-thumbnail {
-      margin-top: 32px;
-      width: 100px;
-    }
-
-    .paper-title {
-      margin-top: 24px;
-      font-size: 24px;
-      font-weight: 400;
-      line-height: 125%;
-      letter-spacing: -0.01em;
-      color: $charcoal-dark;
-      text-align: center;
-    }
-
-    .paper-authors {
-      margin-top: 8px;
-      font-size: 14px;
-      font-weight: 400;
-      line-height: 140%;
-      letter-spacing: -0.01em;
-      color: $charcoal-dark;
-      text-align: center;
     }
   }
 
