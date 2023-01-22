@@ -27,7 +27,7 @@ export const Header = () => {
   return (
     <div className="Header">
       <div className="branding">
-        <img src={branding} className="logo" alt="logo" />
+        <Link to="/"><img src={branding} className="logo" alt="logo" /></Link>
       </div>
       <div className="flex-spacer" />
       <div className={hamburgerContainerClassName}>
