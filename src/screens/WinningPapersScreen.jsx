@@ -10,7 +10,7 @@ import caratUp from "../assets/carat-up.png";
 import caratDown from "../assets/carat-down.png";
 
 import papersData from "../data/papers.yml";
-import { PAPER_TAGS } from "../constants";
+import { IS_RESEARCH_PORTFOLIO_READY, PAPER_TAGS } from "../constants";
 
 export const WinningPapersScreen = () => {
   const forceUpdate = useForceUpdate();
@@ -98,11 +98,15 @@ export const WinningPapersScreen = () => {
           <p className="primary">2022 Winning Papers</p>
           <p className="secondary">We distribute the prize pool to both the winning contributions and the research on which they most depended. <span className="emphasis">Science stands on the shoulders of giants.</span></p>
           <p className="secondary">Each winner nominates influencing research to share in the prize pool.</p>
+          {IS_RESEARCH_PORTFOLIO_READY &&
+           <React.Fragment>
           <p className="annotation-text">Are you a recipient?</p>
           <a className="button inverted claim-prize" href="#" target="_blank" rel="noreferrer">
             <p className="button-text">Claim prize on <span className="emphasis">Research Portfolio</span></p>
             <img src={externallink} alt="external link" className="external-link" />
           </a>
+           </React.Fragment>
+           }
         </div>
         <div className="flex-spacer" />
         <img src={tournamentbracket} alt="research logo" className="section-image" />
