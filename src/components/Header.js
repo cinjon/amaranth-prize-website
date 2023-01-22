@@ -41,7 +41,8 @@ export const Header = () => {
                   <Link
                     key={navigationLink.display}
                     to={navigationLink.path}
-                    className={navigationLinkClassName}>
+                    className={navigationLinkClassName}
+                    onClick={() => { setIsNavExpanded(false); }}>
                     {navigationLink.display}
                   </Link>
                 )
