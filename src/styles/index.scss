@@ -51,12 +51,20 @@ a, button {
   height: 100%;
   min-height: 100vh;
   max-width: 1280px;
-  padding-left: 64px;
-  padding-right: 64px;
   background-color: $background-cream;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
+
+  @media screen and (min-width: 0px) and (max-width: 480px) {
+    padding-left: 32px;
+    padding-right: 32px;
+  }
+
+  @media screen and (min-width: 480px) {
+    padding-left: 64px;
+    padding-right: 64px;
+  }
 }
 
 .flex-spacer {
@@ -71,6 +79,7 @@ a, button {
   flex-direction: row;
   justify-content: flex-start;
   align-items: center;
+  position: relative;
 
   .branding {
     img.logo {
@@ -78,22 +87,65 @@ a, button {
     }
   }
 
-  .navigation-links {
-    display: flex;
-    flex-direction: row;
-    .navigation-link {
-      font-weight: 400;
-      font-size: 16px;
-      color: $charcoal-medium;
-      &:not(:first-child) {
-        margin-left: 22px;
-      }
-      &.selected {
-        font-weight: 500;
-        color: $charcoal-dark;
+  @media screen and (min-width: 0px) and (max-width: 480px) {
+    .navigation-links {
+      display: none;
+    }
+    .hamburger-icon, .close-icon {
+      height: 24px;
+      width: 24px;
+    }
+    .hamburger-menu {
+      background-color: $background-cream;
+      width: 100%;
+      min-height: calc(100vh - 90px);
+      position: absolute;
+      top: 90px;
+      left: 0;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+
+      .navigation-link {
+        padding-top: 40px;
+        padding-bottom: 40px;
+        font-weight: 400;
+        font-size: 16px;
+        color: $charcoal-medium;
+        &.selected {
+          font-weight: 500;
+          color: $charcoal-dark;
+        }
+        &:not(:first-child) {
+          border-top: 1px solid $charcoal-ultra-light;
+        }
       }
     }
   }
+
+  @media screen and (min-width: 480px) {
+    .hamburger-container {
+      display: none;
+    }
+
+    .navigation-links {
+      display: flex;
+      flex-direction: row;
+      .navigation-link {
+        font-weight: 400;
+        font-size: 16px;
+        color: $charcoal-medium;
+        &:not(:first-child) {
+          margin-left: 22px;
+        }
+        &.selected {
+          font-weight: 500;
+          color: $charcoal-dark;
+        }
+      }
+    }
+  }
+
 }
 
 .Footer {
