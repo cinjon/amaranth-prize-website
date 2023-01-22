@@ -52,18 +52,22 @@ const Join = () => {
     return (
         <form action="#" onSubmit={(e) => onSubmit(e, email)}>
           <div className="section mailing-list-section">
-            <h2 className="section-title">Join our mailing list</h2>
-            <div className="flex-spacer" />
-            <div className="email-input-container">
-              <input
-                className="email-input"
-                placeholder="Email address"
-                onChange={onInputChange}
-                value={email}
-              />
+            <div className="section-component">
+              <h2 className="section-title">Join our mailing list</h2>
             </div>
-            <div className="button inverted">
-              <p className="button-text">Submit</p>
+            <div className="flex-spacer" />
+            <div className="section-component email-input">
+              <div className="email-input-container">
+                <input
+                  className="email-input"
+                  placeholder="Email address"
+                  onChange={onInputChange}
+                  value={email}
+                />
+              </div>
+              <div className="button inverted">
+                <p className="button-text">Submit</p>
+              </div>
             </div>
           </div>
         </form>

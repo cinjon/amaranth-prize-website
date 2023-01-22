@@ -21,7 +21,7 @@ const NextButton = () => {
 
 export const PaperCarousel = ({ papers }) => {
   const paperComponents = papers.map((paper, index) => {
-      // const paperThumbnailUrl = 
+      // const paperThumbnailUrl =
 
       const paperThumbnail = process.env.PUBLIC_URL + '/paper-thumbnails/' + paper.thumbnailName
     return (
@@ -48,9 +48,9 @@ export const PaperCarousel = ({ papers }) => {
         }}
         responsive={{
           0: {
-            items: 3
+            items: 1
           },
-          1280: {
+          480: {
             items: 3
           }
         }} />
