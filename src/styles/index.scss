@@ -17,6 +17,7 @@ $emphasis-red: #B6000F;
 body {
   margin: 0;
   padding: 0;
+  overflow-x: hidden;
 }
 
 * {
@@ -391,6 +392,7 @@ input {
 }
 
 .paper-carousel {
+  overflow-x: hidden;
 
   @media screen and (min-width: 0px) and (max-width: 480px) {
     .paper {
@@ -429,6 +431,47 @@ input {
         text-align: center;
       }
     }
+
+    .alice-carousel {
+
+      .alice-carousel__stage-item {
+        &.__active {
+          margin-right: 16px;
+        }
+      }
+
+      .alice-carousel__prev-btn {
+        margin: 0px;
+        padding: 0px;
+        position: absolute;
+        top: 232px;
+        left: -12px;
+      }
+
+      .alice-carousel__next-btn {
+        margin: 0px;
+        padding: 0px;
+        position: absolute;
+        top: 232px;
+        left: calc(100% - 24px);
+      }
+    }
+
+    .carousel-button {
+      cursor: pointer;
+      width: 36px;
+      height: 36px;
+      padding-top: 10px;
+      padding-bottom: 10px;
+      padding-left: 6px;
+      padding-right: 4px;
+      border: 1px solid $charcoal-ultra-light;
+
+      .carousel-button-image {
+        width: 16px;
+      }
+    }
+
   }
 
   @media screen and (min-width: 480px) {
@@ -468,43 +511,44 @@ input {
         text-align: center;
       }
     }
-  }
 
-  .alice-carousel {
+    .alice-carousel {
 
-    .alice-carousel__stage-item {
-      &.__active {
-        margin-right: 16px;
+      .alice-carousel__stage-item {
+        &.__active {
+          margin-right: 16px;
+        }
+      }
+
+      .alice-carousel__prev-btn {
+        margin: 0px;
+        padding: 0px;
+        position: absolute;
+        top: 232px;
+        left: -18px;
+      }
+
+      .alice-carousel__next-btn {
+        margin: 0px;
+        padding: 0px;
+        position: absolute;
+        top: 232px;
+        left: calc(100% - 18px);
       }
     }
 
-    .alice-carousel__prev-btn {
-      margin: 0px;
-      padding: 0px;
-      position: absolute;
-      top: 232px;
-      left: -18px;
+    .carousel-button {
+      cursor: pointer;
+      width: 36px;
+      height: 36px;
+      padding: 10px;
+      border: 1px solid $charcoal-ultra-light;
+
+      .carousel-button-image {
+        width: 16px;
+      }
     }
 
-    .alice-carousel__next-btn {
-      margin: 0px;
-      padding: 0px;
-      position: absolute;
-      top: 232px;
-      left: calc(100% - 18px);
-    }
-  }
-
-  .carousel-button {
-    cursor: pointer;
-    width: 36px;
-    height: 36px;
-    padding: 10px;
-    border: 1px solid $charcoal-ultra-light;
-
-    .carousel-button-image {
-      width: 16px;
-    }
   }
 
 }
