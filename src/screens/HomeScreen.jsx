@@ -1,4 +1,5 @@
 import React, {useState, useEffect} from "react";
+import { HashLink as Link } from 'react-router-hash-link';
 import yaml from "js-yaml";
 import Collapse from "@kunukn/react-collapse";
 
@@ -21,21 +22,6 @@ import { isValidEmail } from "../helpers"
 
 const Join = () => {
     const [email, setEmail] = useState("")
-    const [subscribed, setSubscribed] = useState(false)
-
-    // async function attemptAirtablePublish(email, papers) {
-    //     let fields = {"email": email}
-    //     await publishAirtableInterest(fields)
-    //         .then((response) => {
-    //             setSubscribed(response);
-    //             gaEventTracker('publishAirtable', 'success')
-    //         })
-    //         .catch((error) => {
-    //             gaEventTracker('publishAirtable', 'fail')
-    //             gaEventTracker('publishAirtableError', error)
-    //             console.log(error)
-    //         })
-    // }
 
     const onSubmit = (e, email) => {
         e.preventDefault();
@@ -46,11 +32,10 @@ const Join = () => {
         const target = e.target;
         const value = target.value;
         setEmail(value)
-        setSubscribed(false)
     }
 
     return (
-        <form action="#" onSubmit={(e) => onSubmit(e, email)}>
+        <form action="https://send.pageclip.co/NByc1PRozCZ7zjCKqnoRuq53CMpZibd8/amaranth-prize-join" className="pageclip-form" method="post">
           <div className="section mailing-list-section">
             <div className="section-component">
               <h2 className="section-title">Join our mailing list</h2>
@@ -60,14 +45,17 @@ const Join = () => {
               <div className="email-input-container">
                 <input
                   className="email-input"
-                  placeholder="Email address"
+                  type="email"
+                  name="email"
                   onChange={onInputChange}
+                  placeholder="Email address"
                   value={email}
+                  required
                 />
               </div>
-              <div className="button inverted">
-                <p className="button-text">Submit</p>
-              </div>
+              <button className="pageclip-form__submit button inverted" type="submit">
+                <span className="button-text">Submit</span>
+              </button>
             </div>
           </div>
         </form>
@@ -92,7 +80,7 @@ const FAQ = () => {
         <div className="faq-items">
           {faqs.map((faq, index) => {
             return (
-              <div className="faq-item" onClick={() => {
+                <div key={`faq-${index}`} className="faq-item" onClick={() => {
                 if(uncollapsedFAQIndex === index) {
                   setUncollapsedFAQIndex(-1);
                 } else {
@@ -167,9 +155,13 @@ export const HomeScreen = () => {
             Substantially increasing the human lifespan. The Amaranth Prize gives <span className="emphasis">no-strings attached funding</span> to the best research in Longevity.
           </p>
           <div className="read-more">
-            <a className="read-more-text" href="#" target="_blank" rel="noreferrer">
-              Read more about our selection process
-            </a>
+            <Link
+              to="/about#selection-process" target="_blank" className="read-more-text" rel="noreferrer"
+            >
+              {/* <a className="read-more-text" href="/about#selection-process" target="_blank" rel="noreferrer"> */}
+                Read more about our selection process
+              {/* </a> */}
+            </Link>
             <img src={rightArrow} alt="right arrow" className="read-more-arrow" />
           </div>
         </div>
@@ -188,9 +180,9 @@ export const HomeScreen = () => {
             <span className="emphasis">Science stands on the shoulders of giants.</span>
           </p>
           <div className="read-more">
-            <a className="read-more-text" href="#" target="_blank" rel="noreferrer">
+            <Link className="read-more-text" to="/about#awarding-section" target="_blank" rel="noreferrer">
               Read more about awarding the prize
-            </a>
+            </Link>
             <img src={rightArrow} alt="right arrow" className="read-more-arrow" />
           </div>
         </div>
@@ -207,9 +199,11 @@ export const HomeScreen = () => {
             We select a topic of primary importance within longevity research and convene a <span className="emphasis">panel of experts</span> to choose research efforts that are the most deserving.
           </p>
           <div className="read-more">
-            <a className="read-more-text" href="#" target="_blank" rel="noreferrer">
+            <Link
+              to="/about#experts-section" target="_blank" className="read-more-text" rel="noreferrer"
+            >
               Read more about the experts
-            </a>
+            </Link>
             <img src={rightArrow} alt="right arrow" className="read-more-arrow" />
           </div>
         </div>
@@ -217,7 +211,7 @@ export const HomeScreen = () => {
 
       <div className="section learn-more-section">
         <div className="content-container">
-          <a className="button" href="#" target="_blank" rel="noreferrer">
+          <a className="button" href="/about" target="_blank" rel="noreferrer">
             <p className="button-text">Learn more about the prize</p>
           </a>
           {IS_RESEARCH_PORTFOLIO_READY ?
@@ -244,7 +238,7 @@ export const HomeScreen = () => {
             <p className="highlight-title">Winners</p>
             <div className="flex-spacer" />
             <div className="see-all">
-              <a className="see-all-text" href="#" target="_blank" rel="noreferrer">
+              <a className="see-all-text" href="/winning-papers" target="_blank" rel="noreferrer">
                 See all
               </a>
               <img src={rightArrow} alt="right arrow" className="see-all-arrow" />
