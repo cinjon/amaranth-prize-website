@@ -6,7 +6,7 @@ import facebook from "../assets/facebook.png";
 import instagram from "../assets/instagram.png";
 import { Link } from "react-router-dom";
 
-import { IS_RESEARCH_PORTFOLIO_READY, IS_INFO_READY } from "../constants"
+import { IS_RESEARCH_PORTFOLIO_READY, IS_INFO_READY, IS_TWITTER_READY } from "../constants"
 
 export const Footer = () => {
 
@@ -36,21 +36,17 @@ export const Footer = () => {
             </div>
             : null}
           </div>
+          {IS_TWITTER_READY ?
           <div className="content-section-wrapper content-secondary">
-            {IS_INFO_READY ?
             <div className="content-section social">
               <p className="content-title">SOCIAL</p>
               <div className="social-links">
                 <a href="https://twitter.com" target="_blank" rel="noreferrer" className="social-link">
                   <img src={twitter} alt="twitter"/>
                 </a>
-                <a href="https://linkedin.com" target="_blank" rel="noreferrer" className="social-link">
-                  <img src={linkedin} alt="linkedin"/>
-                </a>
               </div>
             </div>
-            : null}
-          </div>
+          </div> : null}
         </div>
       </div>
 
