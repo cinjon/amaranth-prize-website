@@ -1938,76 +1938,153 @@ input {
 }
 
 .screen.terms-of-service-screen, .screen.privacy-policy-screen {
+  @media screen and (min-width: 0px) and (max-width: 480px) {
+    .content {
+      margin-bottom: 80px;
+      display: flex;
+      flex-direction: column;
 
-  .content {
-    margin-bottom: 100px;
-    display: flex;
-    flex-direction: column;
-
-    .section-title {
-      margin-top: 72px;
-      text-align: center;
-      font-size: 56px;
-      font-weight: 400;
-      letter-spacing: 0.01em;
-      color: $charcoal-dark;
-    }
-
-    .section-subtitle {
-      margin-top: 8px;
-      margin-bottom: 64px;
-      text-align: center;
-      font-size: 20px;
-      font-weight: 400;
-      line-height: 125%;
-      letter-spacing: -0.01em;
-      color: $charcoal-medium;
-    }
-
-    .numbered-section {
-      position: relative;
-      margin-top: 24px;
-      .section-number {
-        position: absolute;
-        top: 1.5px;
+      .section-title {
+        margin-top: 64px;
+        text-align: center;
+        font-size: 32px;
+        line-height: 120%;
+        font-weight: 400;
+        letter-spacing: -0.01em;
+        color: $charcoal-dark;
       }
+
+      .section-subtitle {
+        margin-top: 8px;
+        margin-bottom: 32px;
+        text-align: center;
+        font-size: 20px;
+        font-weight: 400;
+        line-height: 125%;
+        letter-spacing: -0.01em;
+        color: $charcoal-medium;
+      }
+
+      .numbered-section {
+        position: relative;
+        margin-top: 24px;
+        .section-number {
+          position: absolute;
+          top: 1.5px;
+        }
+        .section-text {
+          margin-left: 24px;
+        }
+      }
+
+      .header-section {
+        .section-header {
+          color: $charcoal-dark;
+          font-size: 16px;
+          line-height: 140%;
+          letter-spacing: -0.01em;
+          font-weight: 600;
+        }
+      }
+
+      .list-section {
+        position: relative;
+        .list-icon {
+          position: absolute;
+          top: 1.5px;
+        }
+        .section-text {
+          margin-left: 24px;
+        }
+      }
+
       .section-text {
-        margin-left: 24px;
-      }
-    }
-
-    .header-section {
-      .section-header {
         color: $charcoal-dark;
         font-size: 16px;
         line-height: 140%;
         letter-spacing: -0.01em;
-        font-weight: 600;
+        font-weight: 400;
+
+        span.emphasis {
+          font-weight: 600;
+        }
       }
     }
 
-    .list-section {
-      position: relative;
-      .list-icon {
-        position: absolute;
-        top: 1.5px;
+  }
+
+  @media screen and (min-width: 480px) {
+    .content {
+      margin-bottom: 100px;
+      display: flex;
+      flex-direction: column;
+
+      .section-title {
+        margin-top: 72px;
+        text-align: center;
+        font-size: 56px;
+        font-weight: 400;
+        letter-spacing: 0.01em;
+        color: $charcoal-dark;
       }
+
+      .section-subtitle {
+        margin-top: 8px;
+        margin-bottom: 64px;
+        text-align: center;
+        font-size: 20px;
+        font-weight: 400;
+        line-height: 125%;
+        letter-spacing: -0.01em;
+        color: $charcoal-medium;
+      }
+
+      .numbered-section {
+        position: relative;
+        margin-top: 24px;
+        .section-number {
+          position: absolute;
+          top: 1.5px;
+        }
+        .section-text {
+          margin-left: 24px;
+        }
+      }
+
+      .header-section {
+        .section-header {
+          color: $charcoal-dark;
+          font-size: 16px;
+          line-height: 140%;
+          letter-spacing: -0.01em;
+          font-weight: 600;
+        }
+      }
+
+      .list-section {
+        position: relative;
+        .list-icon {
+          position: absolute;
+          top: 1.5px;
+        }
+        .section-text {
+          margin-left: 24px;
+        }
+      }
+
       .section-text {
-        margin-left: 24px;
+        color: $charcoal-dark;
+        font-size: 16px;
+        line-height: 140%;
+        letter-spacing: -0.01em;
+        font-weight: 400;
+
+        span.emphasis {
+          font-weight: 600;
+        }
       }
     }
 
-    .section-text {
-      color: $charcoal-dark;
-      font-size: 16px;
-      line-height: 140%;
-      letter-spacing: -0.01em;
-      font-weight: 400;
-
-      span.emphasis {
-        font-weight: 600;
-      }
-    }
   }
 
 }
