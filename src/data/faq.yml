@@ -1,10 +1,13 @@
 ---
 
-  - question: How is Amaranth Prize connected to the Research Portfolio?
-    answer: Research Portfolio is creating a new funding model for scientists, journalists, historians, and anyone else adding to our collective search for the truth, with the goal to augment existing approaches. They build tools for researchers to mint and trade tokens representing their research output. Their technology makes it much easier to create a prize or challenge, because they make it trivial to distribute to a large group of researchers through their research output.
-
   - question: How is the prize pool distributed?
-    answer: placeholder answer
+    answer: The prize pool is distributed almost entirely to the winning papers and their parent and grandparent references. A small amount is used to pay the expert panel for their time. With respect to the paper distributions, the winners receive 80% of their reward and the parents receive 20% of the reward. We require that for a given paper, the first authors split 70% of the reward, the principal investigors 20%, and the middle authors 10%.
 
   - question: How is the Amaranth Prize anchored?
-    answer: placeholder answer
+    answer: Anonymous benefactors anchored the prize because they want to push forward research into Longevity, they care about new approaches to funding, and they agree that our approach has tremendous merit.
+
+  - question: How is Amaranth Prize connected to Research Portfolio?
+    answer: Research Portfolio is creating a new funding model for scientists, journalists, historians, and anyone else adding to our collective search for the truth, with the goal to augment existing approaches. They build tools for researchers to mint and trade tokens representing their research output. Their technology is the best way to create a prize or challenge, because they make it trivial to distribute to a large group of researchers through their research output.
+
+  - question: Why did the Amaranth Prize 2023 focus on Protein Aging?
+    answer: There are many viable topics in the field of Longevity, one of which is Protein Aging. This was enough reason to hone the subject matter to this subfield for 2023.
