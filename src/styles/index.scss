@@ -553,6 +553,62 @@ input {
 
 }
 
+.ReactModal__Overlay {
+  background-color: rgba(0, 0, 0, 0.50) !important;
+}
+
+.bio-modal {
+  position: absolute;
+  left: calc(50% - 216px);
+  top: 40px;
+  outline: 0;
+  background-color: white;
+  width: 432px;
+  border-radius: 10px;
+  padding: 40px;
+  .close-modal {
+    height: 24px;
+    width: 24px;
+    position: absolute;
+    top: 16px;
+    right: 16px;
+    cursor: pointer;
+  }
+  .team-member {
+    display: flex;
+    flex-direction: column;
+    .team-member-photo {
+      height: 250px;
+      width: 250px;
+      border-radius: 50%;
+      align-self: center;
+    }
+    .name {
+      margin-top: 24px;
+      color: $charcoal-dark;
+      font-size: 28px;
+    }
+    .title {
+      color: $charcoal-dark;
+      font-family: "DMSans";
+      font-weight: 400;
+      font-size: 16px;
+    }
+    .bio {
+      color: $charcoal-medium;
+      font-family: "DMSans";
+      font-weight: 400;
+      font-size: 14px;
+      &:nth-child(4) {
+        margin-top: 8px;
+      }
+      &:nth-child(n+5) {
+        margin-top: 16px;
+      }
+    }
+  }
+}
+
 // SCREENS
 // =====================
 .screen.home-screen {

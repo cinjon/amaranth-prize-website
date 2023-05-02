@@ -1,11 +1,17 @@
 import React, { useRef, useState, useEffect } from "react";
 import yaml from "js-yaml";
+import Modal from "react-modal";
 
 import bubbles2 from "../assets/bubbles2.png";
+import close from "../assets/close.png";
 import teamData from "../data/team.yml";
 
+Modal.setAppElement("#root");
+
 export const TeamScreen = () => {
-  const [team, setTeam] = React.useState([]);
+  const [team, setTeam] = useState([]);
+  const [activeBio, setActiveBio] = useState(null);
+  const [bioModalOpen, setBioModalOpen] = useState(false);
 
   useEffect(() => {
     fetch(teamData)
@@ -15,6 +21,16 @@ export const TeamScreen = () => {
       })
   }, []);
 
+  const viewBio = (teamMember) => {
+    setActiveBio(teamMember);
+    setBioModalOpen(true);
+  }
+
+  const closeBioModal = () => {
+    setBioModalOpen(false);
+    setActiveBio(null);
+  }
+
   const renderTeamMember = (teamMemberData) => {
     return (
       <div className="team-member" key={`${teamMemberData.name}`}>
@@ -22,7 +38,7 @@ export const TeamScreen = () => {
         <p className="name">{teamMemberData.name}</p>
         <p className="title">{teamMemberData.title}</p>
         <div className="actions">
-          <div className="button inverted view-bio">
+          <div className="button inverted view-bio" onClick={() => { viewBio(teamMemberData); }}>
             <p className="button-text">View Bio</p>
           </div>
         </div>
@@ -32,6 +48,22 @@ export const TeamScreen = () => {
 
   return (
     <div className="screen team-screen">
+      <Modal
+        className="bio-modal"
+        isOpen={bioModalOpen}
+        onAfterOpen={() => {}}
+        onRequestClose={closeBioModal}
+        contentLabel="Team Member Modal">
+        <div className="team-member">
+          <img className="team-member-photo" src={activeBio?.image_url} alt="team-member-picture" />
+          <p className="name">{activeBio?.name}</p>
+          <p className="title">{activeBio?.title}</p>
+          {activeBio?.bio ? activeBio.bio.split("\\n\\n").map((bioSection, index) => {
+            return ( <p className="bio" key={`bio-section-${index}`}>{bioSection}</p> )
+          }) : (<></>)}
+        </div>
+        <img src={close} className="close-modal" onClick={closeBioModal} />
+      </Modal>
       <div className="section banner-section">
         <div className="text-content">
           <p className="section-title">Team</p>
