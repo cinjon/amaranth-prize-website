@@ -7,6 +7,7 @@ import { Footer } from "./components/Footer";
 
 import { HomeScreen } from "./screens/HomeScreen";
 import { AboutScreen } from "./screens/AboutScreen";
+import { TeamScreen } from "./screens/TeamScreen";
 import { WinningPapersScreen } from "./screens/WinningPapersScreen";
 import { TermsOfServiceScreen } from "./screens/TermsOfServiceScreen";
 import { PrivacyPolicyScreen } from "./screens/PrivacyPolicyScreen";
@@ -40,6 +41,7 @@ export const App = () => {
           <Routes>
             <Route path="/" element={<HomeScreen />} />
             <Route path="/about" element={<AboutScreen />} />
+            <Route path="/team" element={<TeamScreen />} />
             <Route path="/winning-papers" element={<WinningPapersScreen />} />
             <Route path="/terms-of-service" element={<TermsOfServiceScreen />} />
             <Route path="/privacy-policy" element={<PrivacyPolicyScreen />} />

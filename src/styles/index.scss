@@ -1189,6 +1189,177 @@ input {
 
 }
 
+.screen.team-screen {
+  @media screen and (min-width: 0px) and (max-width: 480px) {
+    .banner-section {
+      display: flex;
+      flex-direction: column;
+      .text-content {
+        margin-top: 12px;
+        .section-title {
+          color: $charcoal-dark;
+          font-size: 56px;
+        }
+        .section-description {
+          font-family: "DMSans";
+          font-size: 24px;
+          font-weight: 400;
+          span.emphasis {
+            color: $charcoal-dark;
+            color: $emphasis-red;
+          }
+        }
+      }
+      img {
+        margin-top: 8px;
+        margin-bottom: 16px;
+      }
+    }
+
+    .team-section {
+      .team-members {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: stretch;
+
+        .team-member {
+          display: flex;
+          flex-direction: column;
+          justify-content: flex-start;
+          margin-top: 24px;
+
+          img.team-member-photo {
+            align-self: center;
+            height: 250px;
+            width: 250px;
+            border-radius: 50%;
+          }
+
+          .name {
+            margin-top: 24px;
+            color: $charcoal-dark;
+            font-size: 28px;
+          }
+
+          .title {
+            color: $charcoal-dark;
+            font-size: 16px;
+          }
+
+          .actions {
+            margin-top: 24px;
+            .button {
+              height: 36px;
+              width: 96px;
+              font-size: 16px;
+              padding-left: 10px;
+              padding-right: 10px;
+            }
+          }
+
+        }
+      }
+    }
+
+    .team-section.advisory-board {
+      .advisory-board-title {
+        margin-top: 120px;
+        color: $charcoal-dark;
+        font-size: 56px;
+        font-weight: 400;
+      }
+      margin-bottom: 100px;
+    }
+  }
+
+  @media screen and (min-width: 480px) {
+    .banner-section {
+      height: 635px;
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      .text-content {
+        width: 50%;
+        .section-title {
+          color: $charcoal-dark;
+          font-size: 90px;
+        }
+        .section-description {
+          font-family: "DMSans";
+          font-size: 32px;
+          font-weight: 400;
+          span.emphasis {
+            color: $charcoal-dark;
+            color: $emphasis-red;
+          }
+        }
+      }
+      img {
+        width: 50%;
+      }
+    }
+
+    .team-section {
+      .team-members {
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-start;
+        flex-wrap: wrap;
+
+        .team-member {
+          display: flex;
+          flex-direction: column;
+          justify-content: flex-start;
+          width: 350px;
+          &:nth-child(n+4) {
+            margin-top: 48px;
+          }
+
+          img.team-member-photo {
+            height: 250px;
+            width: 250px;
+            border-radius: 50%;
+          }
+
+          .name {
+            margin-top: 24px;
+            color: $charcoal-dark;
+            font-size: 28px;
+          }
+
+          .title {
+            color: $charcoal-dark;
+            font-size: 16px;
+          }
+
+          .actions {
+            margin-top: 24px;
+            .button {
+              height: 36px;
+              width: 96px;
+              font-size: 16px;
+              padding-left: 10px;
+              padding-right: 10px;
+            }
+          }
+
+        }
+      }
+    }
+
+    .team-section.advisory-board {
+      .advisory-board-title {
+        margin-top: 120px;
+        color: $charcoal-dark;
+        font-size: 90px;
+        font-weight: 400;
+      }
+      margin-bottom: 100px;
+    }
+  }
+}
+
 .screen.about-screen {
 
   @media screen and (min-width: 0px) and (max-width: 480px) {
