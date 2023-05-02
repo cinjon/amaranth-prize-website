@@ -15,6 +15,10 @@ export const Header = () => {
       display: "HOME"
     },
     {
+      path: "/team",
+      display: "TEAM"
+    },
+    {
       path: "/about",
       display: "ABOUT"
     },
