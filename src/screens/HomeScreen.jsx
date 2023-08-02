@@ -25,7 +25,6 @@ import {
   IS_PARENTS_READY,
   IS_GRANDPARENTS_READY,
 } from "../constants";
-import { isValidEmail } from "../helpers";
 
 const Join = () => {
   const [email, setEmail] = useState("");

@@ -8,29 +8,32 @@ const PreviousButton = () => {
     <div className="carousel-button previous">
       <img src={caratLeft} alt="previous" className="carousel-button-image" />
     </div>
-  )
-}
+  );
+};
 
 const NextButton = () => {
   return (
     <div className="carousel-button next">
       <img src={caratRight} alt="next" className="carousel-button-image" />
     </div>
-  )
-}
+  );
+};
 
 export const PaperCarousel = ({ papers }) => {
   const paperComponents = papers.map((paper, index) => {
-      // const paperThumbnailUrl =
-
-      const paperThumbnail = process.env.PUBLIC_URL + '/paper-thumbnails/' + paper.thumbnailName
+    const paperThumbnail =
+      process.env.PUBLIC_URL + "/paper-thumbnails/" + paper.thumbnailName;
     return (
       <div className="paper" key={`paper-${index}`}>
-        <img src={paperThumbnail} alt="paper thumbnail" className="paper-thumbnail" />
+        <img
+          src={paperThumbnail}
+          alt="paper thumbnail"
+          className="paper-thumbnail"
+        />
         <p className="paper-title">{paper.title}</p>
         <p className="paper-authors">{paper.authors}</p>
       </div>
-    )
+    );
   });
 
   return (
@@ -41,20 +44,20 @@ export const PaperCarousel = ({ papers }) => {
         mouseTracking={true}
         infinite={true}
         renderPrevButton={() => {
-          return (<PreviousButton />)
+          return <PreviousButton />;
         }}
         renderNextButton={() => {
-          return (<NextButton />)
+          return <NextButton />;
         }}
         responsive={{
           0: {
-            items: 1
+            items: 1,
           },
           480: {
-            items: 3
-          }
-        }} />
+            items: 3,
+          },
+        }}
+      />
     </div>
-  )
-
-}
+  );
+};
