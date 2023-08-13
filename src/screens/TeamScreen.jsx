@@ -13,6 +13,10 @@ export const TeamScreen = () => {
   const [activeBio, setActiveBio] = useState(null);
   const [bioModalOpen, setBioModalOpen] = useState(false);
 
+  const memberImage = activeBio
+    ? process.env.PUBLIC_URL + "/team/" + activeBio.image_url
+    : null;
+
   useEffect(() => {
     fetch(teamData)
       .then((teamResponse) => {
@@ -72,7 +76,7 @@ export const TeamScreen = () => {
         <div className="team-member">
           <img
             className="team-member-photo"
-            src={activeBio?.image_url}
+            src={memberImage}
             alt="team-member-picture"
           />
           <p className="name">{activeBio?.name}</p>
