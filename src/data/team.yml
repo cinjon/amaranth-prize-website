@@ -54,3 +54,9 @@
   image_url: image3.jpg
   bio: Adam is the CEO of Convergent Research, launching Focused Research Organizations (FROs), such as E11 bio and Cultivarium. He also serves on the boards of several non-profits pursuing new methods of funding and organizing scientific research including Norn Group and New Science.\n\nPreviously, he was a Schmidt Futures Innovation Fellow, a consultant for the Astera Institute, a Fellow with the Federation of American Scientists (FAS), a research scientist at Google DeepMind, Chief Strategy Officer of the brain-computer interface company Kernel, a research scientist at MIT, a PhD student in biophysics with George Church and colleagues at Harvard, and a theoretical physics student at Yale. He also previously helped to start companies like BioBright, and advised foundations such as the Open Philanthropy Project. His work has been recognized with a Technology Review 35 Innovators Under 35 Award (2018), a Fannie and John Hertz Foundation Fellowship (2010) and a Goldwater Scholarship (2008).
   advisory_board: true
+
+- name: Cinjon Resnick
+  title: Lead, Research Portfolio
+  image_url: image10.jpg
+  bio: Cinjon leads Research Portfolio, an organization building tools for researchers to mint and trade tokens representing their research output. He has a BS in Math+CS from MIT and a PhD from NYU in Machine Learning. He's worked at Google Brain, Facebook AI Research, and NVIDIA Research.
+  advisory_board: false

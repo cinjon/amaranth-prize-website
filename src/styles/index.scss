@@ -577,6 +577,9 @@ input {
   .team-member {
     display: flex;
     flex-direction: column;
+    height: 500px;
+    overflow-y: auto;
+    
     .team-member-photo {
       height: 250px;
       width: 250px;
