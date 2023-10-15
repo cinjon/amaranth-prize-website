@@ -332,7 +332,7 @@ export const HomeScreen = () => {
         <div className="text-content">
           <p className="section-title">WINNING PAPERS</p>
           <p className="section-description">
-            <span className="emphasis">The 2022 Amaranth Prize winners</span>{" "}
+            <span className="emphasis">The 2023 Amaranth Prize winners</span>{" "}
             were selected in the field from a review of over 2800 papers.
           </p>
         </div>
