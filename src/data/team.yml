@@ -4,6 +4,18 @@
   image_url: image4.jpg
   bio: James is an early Ethereum investor and founded Amaranth to accelerate research in longevity. He assembled Amaranth’s SAB, a group of young leaders in longevity biotech, to source and evaluate ambitious research covering brain aging, the aggregome, spinal cord injury, cryopreservation, and neurotech.\n\nHe has backed the Norn Group, Impetus Grants, the SuperAgers Family Initiative, the Longevity Undergraduate Program, MBL Aging Course, as well as labs from Harvard, MIT, and Stanford.
 
+- name: Cinjon Resnick
+  title: Lead, Research Portfolio
+  image_url: image.cinjon.jpeg
+  bio: Cinjon leads Research Portfolio, an organization building tools for researchers to mint and trade tokens representing their research output. He has a BS in Math+CS from MIT and a PhD from NYU in Machine Learning. He's worked at Google Brain, Facebook AI Research, and NVIDIA Research.
+  advisory_board: false
+
+- name: Joanne Peng
+  title: Project Lead
+  image_url: image.joanne.jpeg
+  bio: Joanne is currently at Princeton and the Boyden Lab at MIT, where she works on tools for brain aging including spatial proteomics and whole brain modeling. Previously, she was a Thiel Fellow, where she worked on mitochondrial dynamics at the Biomedical Institute at MaRS, COVID testing at Curative, and cancer research at the Buck Institute.\n\nJoanne has been supported by the Thiel Fellowship, Interact Fellowship, Day One Project, the Institute for Progress, the Davis UWC Foundation, and VitaDAO.
+
+
 - name: Rohan Krajeski
   title: Consultant, Neuroscience
   image_url: image7.jpg
@@ -13,6 +25,11 @@
   title: Consultant, Policy and Ethics
   image_url: raiany.jpg
   bio: Raiany spends most of her time thinking about how converging technologies will transform governments and human nature in the coming decades. She's particularly interested in why secular humans narrate aging as a net-positive, teleological phenomenon—and in the negative effects of this narrative on economies and societies.\n\nHer work has appeared in The Washington Post, The Boston Globe, Forbes, Quillette, The Hill, and ABC, and she is currently a Consultant for the Healthspan XPRIZE. With support from Amaranth, Raiany is working on a non-fiction book aimed at shifting the ethics, policy and philosophy of aging research. Alongside the Federation of American Scientists, she is also developing new policy narratives for aging, building on the bipartisan support for multi-billion-dollar governmental plans to democratize effective care and therapies for older adults as a foundation for common ground and progress in the aging field.
+
+- name: Kat Kajderowicz
+  title: Consultant
+  image_url: image.kat.jpg
+  bio: Kat is a PhD student at MIT in Sinisa Hrvatin’s Lab studying the biology of cold tolerance, where she is a P.D. Soros Fellow and Nancy Garvey Fellow. Prior to MIT, Kat studied retinal development in Connie Cepko’s Lab at Harvard Medical School, built computational tools for researchers as an undergrad at Cornell, and interned with the R&D team at Loyal.\n\nShe is passionate about building talent and community networks for the longevity field with age1 and DNA Deviants. She has also worked with Pillar VC and Day One Ventures.
 
 - name: Courtney Hudson-Paz
   title: Consultant, Activating Talent
@@ -55,8 +72,12 @@
   bio: Adam is the CEO of Convergent Research, launching Focused Research Organizations (FROs), such as E11 bio and Cultivarium. He also serves on the boards of several non-profits pursuing new methods of funding and organizing scientific research including Norn Group and New Science.\n\nPreviously, he was a Schmidt Futures Innovation Fellow, a consultant for the Astera Institute, a Fellow with the Federation of American Scientists (FAS), a research scientist at Google DeepMind, Chief Strategy Officer of the brain-computer interface company Kernel, a research scientist at MIT, a PhD student in biophysics with George Church and colleagues at Harvard, and a theoretical physics student at Yale. He also previously helped to start companies like BioBright, and advised foundations such as the Open Philanthropy Project. His work has been recognized with a Technology Review 35 Innovators Under 35 Award (2018), a Fannie and John Hertz Foundation Fellowship (2010) and a Goldwater Scholarship (2008).
   advisory_board: true
 
-- name: Cinjon Resnick
-  title: Lead, Research Portfolio
-  image_url: image10.jpg
-  bio: Cinjon leads Research Portfolio, an organization building tools for researchers to mint and trade tokens representing their research output. He has a BS in Math+CS from MIT and a PhD from NYU in Machine Learning. He's worked at Google Brain, Facebook AI Research, and NVIDIA Research.
-  advisory_board: false
+- name: Bri McCoy
+  title: Consultant
+  image_url: image.bri.jpg
+  bio: Bri is a Molecular and Cellular Biology PhD candidate at ASU in Noah Snyder-Mackler’s Lab where she works on understanding how the environment modifies DNAm dynamics in the immune system of companion dogs during aging.\n\nBri has expertise in the biology of aging, bioinformatics, and immunology. Prior to ASU, she conducted research on muscle aging at the National Institute on Aging, and the epigenetics of aging at Harvard Medical School. She has also worked with Pillar VC, Apollo Health Ventures, and Portal Innovations.
+
+- name: Alex Telford
+  title: Consultant
+  image_url: image.alex.png
+  bio: Alex is passionate about finding ways to overcome biomedical stagnation and increase the efficiency of drug development - especially for technologies or conditions without established regulatory or commercial pathways, like aging. He is the founder of Convoke, a software start-up developing a suite of automation and data tools to help biotech and pharmaceutical companies make better development and commercialization decisions, faster. In addition to his day job, Alex writes about biotech online and is a Roots of Progress Fellow.\n\nPrior to founding Convoke, Alex was an Associate Principal in the life sciences practice at Charles River Associates, where he advised clients on commercialization and development strategy across a variety of therapy areas, including age-related diseases like Alzheimer's and cancer. Alex holds a bachelors in biochemistry from the University of Bristol and a Masters in synthetic biology from UCL.
